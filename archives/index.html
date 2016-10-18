@@ -155,21 +155,31 @@
         </div>
         <div class="archives">
     
-    <article class="archive-article archive-type-<%= post.layout %>">
+    <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
     <header class="archive-article-header">
       	<div class="article-meta">
-	      	<%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
+	      	<a href="/2016/10/18/postHello-For-My-First-Blog/" class="archive-article-date">
+  	<time datetime="2016-10-18T05:57:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-18</time>
+</a>
         </div>
-    	 <%- partial('post/title', {class_name: 'archive-article-title'}) %>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/10/18/postHello-For-My-First-Blog/">postHello For My First Blog</a>
+    </h1>
+  
+
         <div class="article-info info-on-right">
-          <%- partial('post/tag') %>
-          <%- partial('post/category') %>
+          
+          
+
         </div>
         <div class="clearfix"></div>
     </header>
   </div>
 </article>
+
   
   
     </div></section>
