@@ -163,8 +163,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="http://of89t88ay.bkt.clouddn.com/2f6b943ffdee88339e10acb9e3fbb37c73a9f8b62abe9-acptHu_fw658.jpeg" alt="Mou icon"></p>
-<p>#<center>This is my  first blog </center></p>
-<p><b>I am very happy as my blog was build<br><br><b>I will try my best to update the maintenance of this blog when later work.</b></b></p>
+<p>#This is my  first blog</p>
+<p>I am very happy as my blog was build<br><br>I will try my best to update the maintenance of this blog when later work.</p>
 
       
     </div>
@@ -212,24 +212,25 @@
     </div>
     <script>
 	var yiliaConfig = {
-		fancybox: true,
-		mathjax: false,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false,
-		root: "/",
-		innerArchive: true
+		fancybox: <%=theme.fancybox%>,
+		mathjax: <%=theme.mathjax%>,
+		animate: <%=theme.animate%>,
+		isHome: <%=is_home()%>,
+		isPost: <%=is_post()%>,
+		isArchive: <%=is_archive()%>,
+		isTag: <%=is_tag()%>,
+		isCategory: <%=is_category()%>,
+		open_in_new: <%=theme.open_in_new%>,
+		root: "<%=config.root%>",
+		innerArchive: <%=theme.smart_menu.innerArchive ? true : false%>
 	}
 </script>
 
-<script src="/./main.js"></script>
+<%- js('./main') %>
 
-
-
+<% if (theme.mathjax){ %>
+<%- partial('mathjax') %>
+<% } %>
     
 <div class="tools-col">
   <ul class="btn-wrap">
