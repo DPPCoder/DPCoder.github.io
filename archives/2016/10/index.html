@@ -142,43 +142,49 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-  
-    
-    
-      
-      
+        <% if (pagination == 2){ %>
+  <% page.posts.each(function(post){ %>
+    <%- partial('article', {post: post, index: true}) %>
+  <% }) %>
+  <% if (page.total > 1){ %>
+    <nav id="page-nav">
+      <%- paginator({
+        prev_text: '&laquo; Prev',
+        next_text: 'Next &raquo;'
+      }) %>
+    </nav>
+  <% } %>
+<% } else { %>
+  <% var last; %>
+  <% page.posts.each(function(post, i){ %>
+    <% var year = post.date.year(); %>
+    <% if (last != year){ %>
+      <% if (last != null){ %>
+        </div></section>
+      <% } %>
+      <% last = year; %>
       <section class="archives-wrap">
         <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
+          <a href="<%- url_for('archives/' + year) %>" class="archive-year"><%= year %></a>
         </div>
         <div class="archives">
-    
-    <article class="archive-article archive-type-<%= post.layout %>">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
-        </div>
-    	 <%- partial('post/title', {class_name: 'archive-article-title'}) %>
-        <div class="article-info info-on-right">
-          <%- partial('post/tag') %>
-          <%- partial('post/category') %>
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
+    <% } %>
+    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+  <% }) %>
+  <% if (page.posts.length){ %>
     </div></section>
-  
+  <% } %>
 
-    
+    <% if (page.total > 1){ %>
+    <nav id="page-nav">
+      <%- paginator({
+        prev_text: '&laquo; Prev',
+        next_text: 'Next &raquo;'
+      }) %>
+    </nav>
+  <% } %>
 
-
-
+<% } %>
       </div>
       <footer id="footer">
   <div class="outer">
