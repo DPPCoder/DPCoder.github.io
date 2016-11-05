@@ -147,13 +147,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -269,7 +269,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-iOS-常用宏定义" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -493,17 +493,17 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/10/22/iOS-常用宏定义/">iOS 常用宏定义</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Duan</a></p>
-        <p><span>Created:</span>2016-10-22, 16:30:22</p>
-        <p><span>Updated:</span>2016-11-03, 10:37:54</p>
+        <p><span>本文标题:</span><a href="/2016/10/22/iOS-常用宏定义/">iOS 常用宏定义</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Mr.Duan</a></p>
+        <p><span>发布时间:</span>2016-10-22, 16:30:22</p>
+        <p><span>最后更新:</span>2016-11-03, 10:37:54</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/10/22/iOS-常用宏定义/" title="iOS 常用宏定义">http://dpcoder.cn/2016/10/22/iOS-常用宏定义/</a>
-            <span class="copy-path" data-clipboard-text="From http://dpcoder.cn/2016/10/22/iOS-常用宏定义/　　By Mr.Duan" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/22/iOS-常用宏定义/" title="iOS 常用宏定义">http://dpcoder.cn/2016/10/22/iOS-常用宏定义/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://dpcoder.cn/2016/10/22/iOS-常用宏定义/　　作者: Mr.Duan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -530,7 +530,7 @@
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
+        <strong class="toc-title">文章目录</strong>
         
             <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用变量"><span class="toc-number">1.</span> <span class="toc-text">常用变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#程序运行过程中打印调试log"><span class="toc-number">1.0.1.</span> <span class="toc-text">程序运行过程中打印调试log</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#定义宏表示-一个通用的警告的"><span class="toc-number">1.0.2.</span> <span class="toc-text">定义宏表示 一个通用的警告的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#得到应用的window"><span class="toc-number">1.0.3.</span> <span class="toc-text">得到应用的window</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断ios版本是否高于或者低于多少"><span class="toc-number">1.0.4.</span> <span class="toc-text">判断ios版本是否高于或者低于多少</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断设备是否为iPhone几"><span class="toc-number">1.0.5.</span> <span class="toc-text">判断设备是否为iPhone几</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#定义出来屏幕bounds-height-width-以及一些特殊的控件尺寸，宽，高等"><span class="toc-number">1.0.6.</span> <span class="toc-text">定义出来屏幕bounds,height,width,以及一些特殊的控件尺寸，宽，高等</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#根据一个数值生成一种颜色，调用一个颜色的类别里的类方法。"><span class="toc-number">1.0.7.</span> <span class="toc-text">根据一个数值生成一种颜色，调用一个颜色的类别里的类方法。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#根据一个颜色生成一个一张图片"><span class="toc-number">1.0.8.</span> <span class="toc-text">根据一个颜色生成一个一张图片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#根据一个数值生成一个图片。UIImage类型的"><span class="toc-number">1.0.9.</span> <span class="toc-text">根据一个数值生成一个图片。UIImage类型的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#相对于iPhone5-缩放的比例，乘以一个值X-，得到一个值-。用于设置-控件和view的尺寸大小。"><span class="toc-number">1.0.10.</span> <span class="toc-text">相对于iPhone5 缩放的比例，乘以一个值X ，得到一个值 。用于设置 控件和view的尺寸大小。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#未读消息，未读消息数量，类型，如：艾特，评论，系统消息等等的"><span class="toc-number">1.0.11.</span> <span class="toc-text">未读消息，未读消息数量，类型，如：艾特，评论，系统消息等等的</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接颜色"><span class="toc-number">2.</span> <span class="toc-text">链接颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#防止如block的循环引用，定义一些weak和strong类型的数据。"><span class="toc-number">2.0.1.</span> <span class="toc-text">防止如block的循环引用，定义一些weak和strong类型的数据。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NProjectViewController-m"><span class="toc-number">3.</span> <span class="toc-text">NProjectViewController.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ProjectListView-m"><span class="toc-number">4.</span> <span class="toc-text">ProjectListView.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ProjectListTaCell-m"><span class="toc-number">5.</span> <span class="toc-text">ProjectListTaCell.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ForkTreeViewController-m"><span class="toc-number">6.</span> <span class="toc-text">ForkTreeViewController.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MRPRListViewController-m"><span class="toc-number">7.</span> <span class="toc-text">MRPRListViewController.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Login-m"><span class="toc-number">8.</span> <span class="toc-text">Login.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ProjectActivityListView-m"><span class="toc-number">9.</span> <span class="toc-text">ProjectActivityListView.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ProjectActivityListCell-m"><span class="toc-number">10.</span> <span class="toc-text">ProjectActivityListCell.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ProjectTaskListViewCell"><span class="toc-number">11.</span> <span class="toc-text">ProjectTaskListViewCell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ProjectTaskListViewCell-1"><span class="toc-number">12.</span> <span class="toc-text">ProjectTaskListViewCell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UIMessageInputView"><span class="toc-number">13.</span> <span class="toc-text">UIMessageInputView</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AudioVolumeView"><span class="toc-number">14.</span> <span class="toc-text">AudioVolumeView</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ProjectMemberListViewController"><span class="toc-number">15.</span> <span class="toc-text">ProjectMemberListViewController</span></a></li></ol>
         
@@ -546,10 +546,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
     <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
     </script>
 
 
@@ -607,15 +607,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/10/27/Mac-Xcode-常用快捷键/" title="Pre: Mac &amp;&amp; Xcode 常用快捷键">
+            <a href="/2016/10/27/Mac-Xcode-常用快捷键/" title="上一篇: Mac &amp;&amp; Xcode 常用快捷键">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/10/18/postHello-For-My-First-Blog/" title="Next: My First Blog">
+            <a href="/2016/10/18/postHello-For-My-First-Blog/" title="下一篇: My First Blog">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -638,14 +638,14 @@
                 2016 Mr.Duan
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -654,7 +654,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -687,9 +687,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
