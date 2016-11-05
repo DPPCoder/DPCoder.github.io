@@ -4,6 +4,22 @@
   
     
     <entry>
+      <title><![CDATA[iTerm2 详细配置教程]]></title>
+      <url>http://dpcoder.cn/2016/11/05/iTerm2-%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<h1 id="iTerm配置说明"><a href="#iTerm配置说明" class="headerlink" title="iTerm配置说明"></a>iTerm配置说明</h1><p><strong>这是一个很智能的配置，不论你电脑里面有没有安装iTerm，不管你有没有.zshrc配置文件，git配置文件，git忽略文件，以及git的默认编辑器都已经更改为vim，等等这些。此配置文件都已经做好，你需要做的就是以下步骤哦</strong></p>
+<p>##只需要操作以下橙色标记的几步，即可配置成功😄</p>
+<h2 id="localConfig-tgz【点击此处下载】"><a href="#localConfig-tgz【点击此处下载】" class="headerlink" title="localConfig.tgz【点击此处下载】"></a><a href="http://og5omwyqh.bkt.clouddn.com/localConfig.tgz" target="_blank" rel="external">localConfig.tgz【点击此处下载】</a></h2><h4 id="1-把localConfig-tgz拷贝到家目录下（也可以拷贝到别的目录下，以下操作是以家目录下为准）"><a href="#1-把localConfig-tgz拷贝到家目录下（也可以拷贝到别的目录下，以下操作是以家目录下为准）" class="headerlink" title="1 把localConfig.tgz拷贝到家目录下（也可以拷贝到别的目录下，以下操作是以家目录下为准）"></a>1 <code>把localConfig.tgz拷贝到家目录下</code>（也可以拷贝到别的目录下，以下操作是以家目录下为准）</h4><h4 id="2-每台Mac电脑都有自带的终端，打开Mac自带终端（这是对于没有安装iTerm的情况下，如果已经安装，那么可以在iTerm里面操作也行）"><a href="#2-每台Mac电脑都有自带的终端，打开Mac自带终端（这是对于没有安装iTerm的情况下，如果已经安装，那么可以在iTerm里面操作也行）" class="headerlink" title="2 每台Mac电脑都有自带的终端，打开Mac自带终端（这是对于没有安装iTerm的情况下，如果已经安装，那么可以在iTerm里面操作也行）"></a>2 每台Mac电脑都有自带的终端，打开<code>Mac自带终端</code>（这是对于没有安装iTerm的情况下，如果已经安装，那么可以在iTerm里面操作也行）</h4><h4 id="3-在终端里面进入家目录下执行以下操作"><a href="#3-在终端里面进入家目录下执行以下操作" class="headerlink" title="3 在终端里面进入家目录下执行以下操作"></a>3 在终端里面进入家目录下执行以下操作</h4><h4 id="4-tar-xfvz-localConfig-tgz-解压-（也可双击此文件解压）"><a href="#4-tar-xfvz-localConfig-tgz-解压-（也可双击此文件解压）" class="headerlink" title="4 tar xfvz localConfig.tgz (解压)（也可双击此文件解压）"></a>4 <code>tar xfvz localConfig.tgz</code> (解压)（也可双击此文件解压）</h4><h4 id="5-然后-cd-lolocalConfig-进入解压完的localConfig目录，必须进入lolocalConfig里面，因为运行此脚本是基于这个脚本所在的目录"><a href="#5-然后-cd-lolocalConfig-进入解压完的localConfig目录，必须进入lolocalConfig里面，因为运行此脚本是基于这个脚本所在的目录" class="headerlink" title="5 然后 cd lolocalConfig (进入解压完的localConfig目录，必须进入lolocalConfig里面，因为运行此脚本是基于这个脚本所在的目录)"></a>5 然后 <code>cd lolocalConfig</code> (进入解压完的localConfig目录，必须进入lolocalConfig里面，因为运行此脚本是基于这个脚本所在的目录)</h4><h4 id="6-ls-此时看到有两个目录，一个脚本文件-分别为-dotfiles-tools-install-sh"><a href="#6-ls-此时看到有两个目录，一个脚本文件-分别为-dotfiles-tools-install-sh" class="headerlink" title="6 ls  此时看到有两个目录，一个脚本文件 分别为 dotfiles        tools install.sh"></a>6 <code>ls</code>  此时看到有两个目录，一个脚本文件 分别为 dotfiles        tools install.sh</h4><h4 id="7-注意：-dotfiles-里面很多隐藏文件，所以打开这个文件的时候看不到，不要删除。lolocalConfig里面也有很多隐藏文件"><a href="#7-注意：-dotfiles-里面很多隐藏文件，所以打开这个文件的时候看不到，不要删除。lolocalConfig里面也有很多隐藏文件" class="headerlink" title="7 注意： dotfiles 里面很多隐藏文件，所以打开这个文件的时候看不到，不要删除。lolocalConfig里面也有很多隐藏文件"></a>7 注意： dotfiles 里面很多隐藏文件，所以打开这个文件的时候看不到，不要删除。lolocalConfig里面也有很多隐藏文件</h4><h4 id="8-执行-install-sh-回车-，输入密码-出现-Info-Success-即可成功"><a href="#8-执行-install-sh-回车-，输入密码-出现-Info-Success-即可成功" class="headerlink" title="8 执行 ./install.sh 回车 ，输入密码 出现[Info]: Success!即可成功"></a>8 执行 <code>./install.sh</code> 回车 ，输入密码 出现<code>[Info]: Success!</code>即可成功</h4><h4 id="9-重新打开iTerm，你就会看到已经配置好的iTerm。"><a href="#9-重新打开iTerm，你就会看到已经配置好的iTerm。" class="headerlink" title="9 重新打开iTerm，你就会看到已经配置好的iTerm。"></a>9 重新打开iTerm，你就会看到已经配置好的iTerm。</h4><h3 id="附加条：-更改操作git的用户名和邮箱"><a href="#附加条：-更改操作git的用户名和邮箱" class="headerlink" title="附加条： 更改操作git的用户名和邮箱"></a><strong>附加条：</strong> 更改操作git的用户名和邮箱</h3><ol>
+<li>方法一：在家目录下，<code>vi .gitconfig</code> 直接更改里面的name，email，然后保存退出。</li>
+<li>方法二：执行以下两步<ol>
+<li><code>git config --global user.name &quot;XXXX&quot;</code></li>
+<li><code>git config --global user.email XXXXXXX@163.com</code></li>
+</ol>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Mac && Xcode 常用快捷键]]></title>
       <url>http://dpcoder.cn/2016/10/27/Mac-Xcode-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
       <content type="html"><![CDATA[<p>一. 苹果快捷键图标<br><img src="http://of89t88ay.bkt.clouddn.com/201504251332212.png" alt="Mac 快捷键"><br>二. Xcode基本快捷键</p>
