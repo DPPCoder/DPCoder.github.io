@@ -1,12 +1,318 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Mr.Duan" />
+
+
+
+<meta name="description" content="各种源码导航.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS开发源码导航">
+<meta property="og:url" content="http://dpcoder.cn/2016/11/21/iOS开发源码导航/index.html">
+<meta property="og:site_name" content="Mr.Duan">
+<meta property="og:description" content="各种源码导航.">
+<meta property="og:image" content="https://travis-ci.org/douban/rexxar-ios.svg?branch=master">
+<meta property="og:image" content="https://img.shields.io/badge/language-ObjC-blue.svg">
+<meta property="og:updated_time" content="2016-11-21T08:45:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS开发源码导航">
+<meta name="twitter:description" content="各种源码导航.">
+<meta name="twitter:image" content="https://travis-ci.org/douban/rexxar-ios.svg?branch=master">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Mr.Duan" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="http://of89t88ay.bkt.clouddn.com/56D566BAB04283EAE3DBCC12BDDF00DE.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>iOS开发源码导航 | Mr.Duan</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="http://of89t88ay.bkt.clouddn.com/logo.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Mr.Duan</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">段先生</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                        <li>About Me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/dpcoder@yeah.net" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="/">friends</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注iOS移动开发</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Mr.Duan</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="http://of89t88ay.bkt.clouddn.com/logo.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Mr.Duan</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">段先生</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/dpcoder@yeah.net" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-iOS开发源码导航" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2016/11/21/iOS开发源码导航/" class="article-date">
+      <time datetime="2016-11-21T08:37:25.000Z" itemprop="datePublished">2016-11-21</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
     
-    <entry>
-      <title><![CDATA[iOS开发源码导航]]></title>
-      <url>http://dpcoder.cn/2016/11/21/iOS%E5%BC%80%E5%8F%91%E6%BA%90%E7%A0%81%E5%AF%BC%E8%88%AA/</url>
-      <content type="html"><![CDATA[<h1 id="TimLiu-iOS"><a href="#TimLiu-iOS" class="headerlink" title="TimLiu-iOS"></a>TimLiu-iOS</h1><p><a href="https://travis-ci.org/douban/rexxar-ios" target="_blank" rel="external"><img src="https://travis-ci.org/douban/rexxar-ios.svg?branch=master" alt="Test Status"></a><br><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html" target="_blank" rel="external"><img src="https://img.shields.io/badge/language-ObjC-blue.svg" alt="Language"></a>  </p>
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS开发源码导航
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="TimLiu-iOS"><a href="#TimLiu-iOS" class="headerlink" title="TimLiu-iOS"></a>TimLiu-iOS</h1><p><a href="https://travis-ci.org/douban/rexxar-ios" target="_blank" rel="external"><img src="https://travis-ci.org/douban/rexxar-ios.svg?branch=master" alt="Test Status"></a><br><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html" target="_blank" rel="external"><img src="https://img.shields.io/badge/language-ObjC-blue.svg" alt="Language"></a>  </p>
 <p><a href="https://github.com/Tim9Liu9/TimLiu-iOS/blob/master/Swift.md" target="_blank" rel="external">Swift版本点击这里</a><br>欢迎加入交QQ流群:  594119878</p>
 <p>github排名 <a href="https://github.com/trending" target="_blank" rel="external">https://github.com/trending</a>,github搜索：<a href="https://github.com/search" target="_blank" rel="external">https://github.com/search</a></p>
 <p>使用方法：根据目录关键字搜索，记得包含@，以保证搜索目录关键字的唯一性。</p>
@@ -1568,298 +1874,228 @@
 <li><a href="https://github.com/hyperoslo/Form" target="_blank" rel="external">Form</a> Form 是一个方便开发者创建表单填写工作的 UI 库。</li>
 <li><a href="https://github.com/wg689/Solve-App-Store-Review-Problemm" target="_blank" rel="external">Solve-App-Store-Review-Problemm</a> (ipv6,ipv6被拒绝,后台定位等审核问题的终极解决方案汇总)。</li>
 </ul>
-]]></content>
-    </entry>
+
+      
+    </div>
     
-    <entry>
-      <title><![CDATA[iOS开发----Block使用]]></title>
-      <url>http://dpcoder.cn/2016/11/08/iOS%E5%BC%80%E5%8F%91-Block%E4%BD%BF%E7%94%A8/</url>
-      <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div></pre></td><td class="code"><pre><div class="line">本文翻译自苹果的文档，有删减，也有添加自己的理解部分。</div><div class="line"></div><div class="line">如果有Block语法不懂的，可以参考fuckingblocksyntax，里面对于Block</div><div class="line"></div><div class="line">为了方便对比，下面的代码我假设是写在ViewController子类中的</div><div class="line"></div><div class="line">1、第一部分</div><div class="line"></div><div class="line">定义和使用Block，</div><div class="line"></div><div class="line">- (void)viewDidLoad</div><div class="line">&#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    //（1）定义无参无返回值的Block</div><div class="line">    void (^printBlock)() = ^()&#123;</div><div class="line">        printf(&quot;no number&quot;);</div><div class="line">    &#125;;</div><div class="line">    printBlock();</div><div class="line">    </div><div class="line"></div><div class="line">    printBlock(9);</div><div class="line">    </div><div class="line">    int mutiplier = 7;</div><div class="line">    //（3）定义名为myBlock的代码块，返回值类型为int</div><div class="line">    int (^myBlock)(int) = ^(int num)&#123;</div><div class="line">        return num*mutiplier;</div><div class="line">    &#125;</div><div class="line">    //使用定义的myBlock</div><div class="line">    int newMutiplier = myBlock(3);</div><div class="line">    printf(&quot;newMutiplier is %d&quot;,myBlock(3));</div><div class="line">&#125;</div><div class="line">//定义在-viewDidLoad方法外部</div><div class="line">//（2）定义一个有参数，没有返回值的Block</div><div class="line">void (^printNumBlock)(int) = ^(int num)&#123;</div><div class="line">    printf(&quot;int number is %d&quot;,num);</div><div class="line">&#125;;</div><div class="line">定义Block变量，就相当于定义了一个函数。但是区别也很明显，因为函数肯定是在-viewDidLoad方法外面定义，而Block变量定义在了viewDidLoad方法内部。当然，我们也可以把Block定义在-viewDidLoad方法外部，例如上面的代码块printNumBlock的定义，就在-viewDidLoad外面。</div><div class="line"></div><div class="line">再来看看上面代码运行的顺序问题，以第（3）个myBlock距离来说，在定义的地方，并不会执行Block&#123;&#125;内部的代码，而在myBlock(3)调用之后才会执行其中的代码，这跟函数的理解其实差不多，就是只要在调用Block（函数）的时候才会执行Block体内（函数体内）的代码。所以上面的简单代码示例，我可以作出如下的结论，</div><div class="line"></div><div class="line">（1）在类中，定义一个Block变量，就像定义一个函数；</div><div class="line"></div><div class="line">（2）Block可以定义在方法内部，也可以定义在方法外部；</div><div class="line"></div><div class="line">（3）只有调用Block时候，才会执行其&#123;&#125;体内的代码；</div><div class="line"></div><div class="line">（PS：关于第（2）条，定义在方法外部的Block，其实就是文件级别的全局变量）</div><div class="line"></div><div class="line">那么在类中定义一个Block，特别是在-viewDidLoad方法体内定义一个Block到底有什么意义呢？我表示这时候只把它当做私有函数就可以了。我之前说过，Block其实就相当于代理，那么这时候我该怎样将其与代理类比以了解呢。这时候我可以这样说：本类中的Block就相当于类自己服从某个协议，然后让自己代理自己去做某个事情。很拗口吧？看看下面的代码，</div><div class="line"></div><div class="line">//定义一个协议</div><div class="line">@protocol ViewControllerDelegate&lt;NSObject&gt;</div><div class="line">- (void)selfDelegateMethod;</div><div class="line">@end</div><div class="line"></div><div class="line">//本类实现这个协议ViewControllerDelegate</div><div class="line">@interface ViewController ()&lt;ViewControllerDelegate&gt;</div><div class="line">@property (nonatomic, assign) id&lt;ViewControllerDelegate&gt; delegate;</div><div class="line"></div><div class="line">@end</div><div class="line">接着在-viewDidLoad中的代码如下，</div><div class="line"></div><div class="line">- (void)viewDidLoad</div><div class="line">&#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    // Do any additional setup after loading the view from its nib.</div><div class="line">    self.delegate = self;</div><div class="line">    if (self.delegate &amp;&amp; [self.delegate respondsToSelector:@selector(selfDelegateMethod)]) &#123;</div><div class="line">        [self.delegate selfDelegateMethod];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#pragma mark - ViewControllerDelegate method</div><div class="line">//实现协议中的方法</div><div class="line">- (void)selfDelegateMethod</div><div class="line">&#123;</div><div class="line">    NSLog(@&quot;自己委托自己实现的方法&quot;);</div><div class="line">&#125;</div><div class="line">看出这种写法的奇葩地方了吗？自己委托自己去实现某个方法，而不是委托别的类去实现某个方法。本类中定义的一个Block其实就是闲的蛋疼，委托自己去字做某件事情，实际的意义不大，所以你很少看见别人的代码直接在类中定义Block然后使用的，Block很多的用处是跨越两个类来使用的，比如作为property属性或者作为方法的参数，这样就能跨越两个类了。</div><div class="line"></div><div class="line">2、第二部分</div><div class="line"></div><div class="line">__block关键字的使用</div><div class="line"></div><div class="line">在Block的&#123;&#125;体内，是不可以对外面的变量进行更改的，比如下面的语句，</div><div class="line"></div><div class="line">- (void)viewDidLoad</div><div class="line">&#123;</div><div class="line">    //将Block定义在方法内部</div><div class="line">    int x = 100;</div><div class="line">    void (^sumXAndYBlock)(int) = ^(int y)&#123;</div><div class="line">    x = x+y;</div><div class="line">    printf(&quot;new x value is %d&quot;,x);</div><div class="line">    &#125;;</div><div class="line">    sumXAndYBlock(50);</div><div class="line">&#125;</div><div class="line">这段代码有什么问题呢，Xcode会提示x变量错误信息：Variable is not assigning (missing __block type)，这时候给int x = 100;语句前面加上__block关键字即可，如下，</div><div class="line"></div><div class="line">__block int x = 100;</div><div class="line">这样在Block的&#123;&#125;体内，就可以修改外部变量了。</div><div class="line"></div><div class="line">3、第三部分：Block作为property属性实现页面之间传值</div><div class="line"></div><div class="line">需求：在ViewController中，点击Button，push到下一个页面NextViewController，在NextViewController的输入框TextField中输入一串字符，返回的时候，在ViewController的Label上面显示文字内容，</div><div class="line"></div><div class="line">（1）第一种方法：首先看看通过“协议/代理”是怎么实现两个页面之间传值的吧，</div><div class="line"></div><div class="line">//NextViewController是push进入的第二个页面</div><div class="line">//NextViewController.h 文件</div><div class="line">//定义一个协议，前一个页面ViewController要服从该协议，并且实现协议中的方法</div><div class="line">@protocol NextViewControllerDelegate &lt;NSObject&gt;</div><div class="line">- (void)passTextValue:(NSString *)tfText;</div><div class="line">@end</div><div class="line"></div><div class="line">@interface NextViewController : UIViewController</div><div class="line">@property (nonatomic, assign) id&lt;NextViewControllerDelegate&gt; delegate;</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">//NextViewController.m 文件</div><div class="line">//点击Button返回前一个ViewController页面</div><div class="line">- (IBAction)popBtnClicked:(id)sender &#123;</div><div class="line">    if (self.delegate &amp;&amp; [self.delegate respondsToSelector:@selector(passTextValue:)]) &#123;</div><div class="line">        //self.inputTF是该页面中的TextField输入框</div><div class="line">        [self.delegate passTextValue:self.inputTF.text];</div><div class="line">    &#125;</div><div class="line">    [self.navigationController popViewControllerAnimated:YES];</div><div class="line">&#125;</div><div class="line">接下来我们在看看ViewController文件中的内容，</div><div class="line"></div><div class="line">//ViewController.m 文件</div><div class="line">@interface ViewController ()&lt;NextViewControllerDelegate&gt;</div><div class="line">@property (strong, nonatomic) IBOutlet UILabel *nextVCInfoLabel;</div><div class="line"></div><div class="line">@end</div><div class="line">//点击Button进入下一个NextViewController页面</div><div class="line">- (IBAction)btnClicked:(id)sender</div><div class="line">&#123;</div><div class="line">    NextViewController *nextVC = [[NextViewController alloc] initWithNibName:@&quot;NextViewController&quot; bundle:nil];</div><div class="line">    nextVC.delegate = self;//设置代理</div><div class="line">    [self.navigationController pushViewController:nextVC animated:YES];</div><div class="line">&#125;</div><div class="line"></div><div class="line">//实现协议NextViewControllerDelegate中的方法</div><div class="line">#pragma mark - NextViewControllerDelegate method</div><div class="line">- (void)passTextValue:(NSString *)tfText</div><div class="line">&#123;</div><div class="line">    //self.nextVCInfoLabel是显示NextViewController传递过来的字符串Label对象</div><div class="line">    self.nextVCInfoLabel.text = tfText;</div><div class="line">&#125;</div><div class="line">这是通过“协议/代理”来实现的两个页面之间传值的方式。</div><div class="line"></div><div class="line">（2）第二种方法：使用Block作为property，实现两个页面之间传值，</div><div class="line"></div><div class="line">先看看NextViewController文件中的内容，</div><div class="line"></div><div class="line">//NextViewController.h 文件</div><div class="line">@interface NextViewController : UIViewController</div><div class="line">@property (nonatomic, copy) void (^NextViewControllerBlock)(NSString *tfText);</div><div class="line"></div><div class="line">@end</div><div class="line">//NextViewContorller.m 文件</div><div class="line">- (IBAction)popBtnClicked:(id)sender &#123;</div><div class="line">    if (self.NextViewControllerBlock) &#123;</div><div class="line">        self.NextViewControllerBlock(self.inputTF.text);</div><div class="line">    &#125;</div><div class="line">    [self.navigationController popViewControllerAnimated:YES];</div><div class="line">&#125;</div><div class="line">再来看看ViewController文件中的内容，</div><div class="line"></div><div class="line">- (IBAction)btnClicked:(id)sender</div><div class="line">&#123;</div><div class="line">    NextViewController *nextVC = [[NextViewController alloc] initWithNibName:@&quot;NextViewController&quot; bundle:nil];</div><div class="line">    nextVC.NextViewControllerBlock = ^(NSString *tfText)&#123;</div><div class="line">        [self resetLabel:tfText];</div><div class="line">    &#125;;</div><div class="line">    [self.navigationController pushViewController:nextVC animated:YES];</div><div class="line">&#125;</div><div class="line">#pragma mark - NextViewControllerBlock method</div><div class="line">- (void)resetLabel:(NSString *)textStr</div><div class="line">&#123;</div><div class="line">    self.nextVCInfoLabel.text = textStr;</div><div class="line">&#125;</div><div class="line">好了就这么多代码，可以使用Block来实现两个页面之间传值的目的，实际上就是取代了Delegate的功能。</div><div class="line"></div><div class="line">另外，博客中的代码Sample Code可以再Github下载，如果因为Github被墙了，可以在终端使用git clone + 完整链接，即可克隆项目到本地。</div><div class="line"></div><div class="line">Github中的代码，可以开启两种调试模式，你需要在项目的配置文件BlockSamp-Prefix.pch中注释或者解注释下面的代码，</div><div class="line"></div><div class="line">#define Debug_BlcokPassValueEnable</div><div class="line">即可开启两种调试的方式，如果注释了上面的语句就是使用Delegate进行调试；否则使用Block进行调试。</div></pre></td></tr></table></figure>]]></content>
-    </entry>
+  </div>
+  
     
-    <entry>
-      <title><![CDATA[iTerm2 详细配置教程]]></title>
-      <url>http://dpcoder.cn/2016/11/05/iTerm2-%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<h1 id="iTerm配置说明"><a href="#iTerm配置说明" class="headerlink" title="iTerm配置说明"></a>iTerm配置说明</h1><p><strong>这是一个很智能的配置，不论你电脑里面有没有安装iTerm，不管你有没有.zshrc配置文件，git配置文件，git忽略文件，以及git的默认编辑器都已经更改为vim，等等这些。此配置文件都已经做好，你需要做的就是以下步骤哦</strong></p>
-<p>##只需要操作以下橙色标记的几步，即可配置成功😄</p>
-<h2 id="localConfig-tgz【点击此处下载】"><a href="#localConfig-tgz【点击此处下载】" class="headerlink" title="localConfig.tgz【点击此处下载】"></a><a href="http://og5omwyqh.bkt.clouddn.com/localConfig.tgz" target="_blank" rel="external">localConfig.tgz【点击此处下载】</a></h2><h4 id="1-把localConfig-tgz拷贝到家目录下（也可以拷贝到别的目录下，以下操作是以家目录下为准）"><a href="#1-把localConfig-tgz拷贝到家目录下（也可以拷贝到别的目录下，以下操作是以家目录下为准）" class="headerlink" title="1 把localConfig.tgz拷贝到家目录下（也可以拷贝到别的目录下，以下操作是以家目录下为准）"></a>1 <code>把localConfig.tgz拷贝到家目录下</code>（也可以拷贝到别的目录下，以下操作是以家目录下为准）</h4><h4 id="2-每台Mac电脑都有自带的终端，打开Mac自带终端（这是对于没有安装iTerm的情况下，如果已经安装，那么可以在iTerm里面操作也行）"><a href="#2-每台Mac电脑都有自带的终端，打开Mac自带终端（这是对于没有安装iTerm的情况下，如果已经安装，那么可以在iTerm里面操作也行）" class="headerlink" title="2 每台Mac电脑都有自带的终端，打开Mac自带终端（这是对于没有安装iTerm的情况下，如果已经安装，那么可以在iTerm里面操作也行）"></a>2 每台Mac电脑都有自带的终端，打开<code>Mac自带终端</code>（这是对于没有安装iTerm的情况下，如果已经安装，那么可以在iTerm里面操作也行）</h4><h4 id="3-在终端里面进入家目录下执行以下操作"><a href="#3-在终端里面进入家目录下执行以下操作" class="headerlink" title="3 在终端里面进入家目录下执行以下操作"></a>3 在终端里面进入家目录下执行以下操作</h4><h4 id="4-tar-xfvz-localConfig-tgz-解压-（也可双击此文件解压）"><a href="#4-tar-xfvz-localConfig-tgz-解压-（也可双击此文件解压）" class="headerlink" title="4 tar xfvz localConfig.tgz (解压)（也可双击此文件解压）"></a>4 <code>tar xfvz localConfig.tgz</code> (解压)（也可双击此文件解压）</h4><h4 id="5-然后-cd-lolocalConfig-进入解压完的localConfig目录，必须进入lolocalConfig里面，因为运行此脚本是基于这个脚本所在的目录"><a href="#5-然后-cd-lolocalConfig-进入解压完的localConfig目录，必须进入lolocalConfig里面，因为运行此脚本是基于这个脚本所在的目录" class="headerlink" title="5 然后 cd lolocalConfig (进入解压完的localConfig目录，必须进入lolocalConfig里面，因为运行此脚本是基于这个脚本所在的目录)"></a>5 然后 <code>cd lolocalConfig</code> (进入解压完的localConfig目录，必须进入lolocalConfig里面，因为运行此脚本是基于这个脚本所在的目录)</h4><h4 id="6-ls-此时看到有两个目录，一个脚本文件-分别为-dotfiles-tools-install-sh"><a href="#6-ls-此时看到有两个目录，一个脚本文件-分别为-dotfiles-tools-install-sh" class="headerlink" title="6 ls  此时看到有两个目录，一个脚本文件 分别为 dotfiles        tools install.sh"></a>6 <code>ls</code>  此时看到有两个目录，一个脚本文件 分别为 dotfiles        tools install.sh</h4><h4 id="7-注意：-dotfiles-里面很多隐藏文件，所以打开这个文件的时候看不到，不要删除。lolocalConfig里面也有很多隐藏文件"><a href="#7-注意：-dotfiles-里面很多隐藏文件，所以打开这个文件的时候看不到，不要删除。lolocalConfig里面也有很多隐藏文件" class="headerlink" title="7 注意： dotfiles 里面很多隐藏文件，所以打开这个文件的时候看不到，不要删除。lolocalConfig里面也有很多隐藏文件"></a>7 注意： dotfiles 里面很多隐藏文件，所以打开这个文件的时候看不到，不要删除。lolocalConfig里面也有很多隐藏文件</h4><h4 id="8-执行-install-sh-回车-，输入密码-出现-Info-Success-即可成功"><a href="#8-执行-install-sh-回车-，输入密码-出现-Info-Success-即可成功" class="headerlink" title="8 执行 ./install.sh 回车 ，输入密码 出现[Info]: Success!即可成功"></a>8 执行 <code>./install.sh</code> 回车 ，输入密码 出现<code>[Info]: Success!</code>即可成功</h4><h4 id="9-重新打开iTerm，你就会看到已经配置好的iTerm。"><a href="#9-重新打开iTerm，你就会看到已经配置好的iTerm。" class="headerlink" title="9 重新打开iTerm，你就会看到已经配置好的iTerm。"></a>9 重新打开iTerm，你就会看到已经配置好的iTerm。</h4><h3 id="附加条：-更改操作git的用户名和邮箱"><a href="#附加条：-更改操作git的用户名和邮箱" class="headerlink" title="附加条： 更改操作git的用户名和邮箱"></a><strong>附加条：</strong> 更改操作git的用户名和邮箱</h3><ol>
-<li>方法一：在家目录下，<code>vi .gitconfig</code> 直接更改里面的name，email，然后保存退出。</li>
-<li>方法二：执行以下两步<ol>
-<li><code>git config --global user.name &quot;XXXX&quot;</code></li>
-<li><code>git config --global user.email XXXXXXX@163.com</code></li>
-</ol>
-</li>
-</ol>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Mac && Xcode 常用快捷键]]></title>
-      <url>http://dpcoder.cn/2016/10/27/Mac-Xcode-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-      <content type="html"><![CDATA[<p>一. 苹果快捷键图标<br><img src="http://of89t88ay.bkt.clouddn.com/201504251332212.png" alt="Mac 快捷键"><br>二. Xcode基本快捷键</p>
-<pre><code>新建项目 Shift + CMD + N
-项目中新建文件 CMD + N
-运行 CMD + R
-编译 CMD + B
-停止运行 CMD + .
-清除缓存 Shift + CMD + K
-左缩进 CMD + [
-右缩进 CMD + ]
-关闭项目 CMD + W
-终止程序 CMD + Q 
-注释或取消注释 CMD + /
-自动提示列表 ESC
-</code></pre><p>三. 模拟器常用快捷键</p>
-<pre><code>模拟器Home键 Shift + CMD + H
-模拟器截屏 CMD + S(默认保存到桌面)
-模拟器截屏拷贝 Ctrl + CMD + C(保存在剪贴板)
-模拟器转屏 CMD + → / CMD + ←
-模拟器大小切换 CMD + 1/2/3/4
-模拟器锁屏 CMD + L
-文本框弹出键盘 CMD + K
-文本框允许键盘输入 Shift + CMD + K
-</code></pre><p>四. Xcode编辑快捷键</p>
-<pre><code>向上 Ctrl + P (previous)
-向下 Ctrl + N (next)
-向前 Ctrl + F (forward)
-向后 Ctrl + B (back)
-跳到一行的最前面 Ctrl + A (ahead)
-跳到一行的最后面 Ctrl + E (end)
-删除后面的字符 Ctrl + D (delete)
-删除当前光标一行中所有后面文字 Ctrl + K
-删除当前光标一行中所有后面文字 CMD + Delete
-Control + Y: 将刚刚用Control+ K或CMD+ Delete删除的内容粘贴至光标所在之处
-删除当前光标前面的一个单词 Ctrl + Delete
-调换当前光标两边的字符Ctrl + T
-将光标插入点置于窗口正中Ctrl + L
-复制、剪切、粘贴、撤销略
-</code></pre><p>五. Xcode常用快捷键(方向箭头类)</p>
-<pre><code>Tip: CMD 整行 Option 一个单词 Shift 选中
-编辑界面向前 Ctrl + CMD + 右箭头
-编辑界面向后 Ctrl + CMD + 左箭头
-代码块折叠 CMD + Option + 左箭头
-代码块展开 CMD + Option + 右箭头
-展开或者折叠所有代码块 Shift + CMD + Option + 左右箭头
-切换.m和.h文件 CMD + Ctrl + 上下箭头
-跳到当前编辑器的最前或最后 CMD + 上下箭头
-跳到行首或者行尾 CMD + 左右箭头
-跳到本段的开头或者结尾 Option + 上下箭头
-左右跳动一个单词 Option + 左右箭头
-向前或者向后整行选中 Shift + 上下箭头
-向前或者向后整段选中 Shift + Option + 上下箭头
-向前选中所有先后选中所有 Shift + CMD +上下箭头
-</code></pre><p>六. Xcode常用快捷键</p>
-<pre><code>选中光标所在的词 双击
-选中光标所在的整行 三连击
-焦点跳到工程导航器 CMD + 1
-显示/隐藏导航器面板 CMD + 0(zero)
-显示/隐藏实用工具面板Y CMD + Option + 0(zero)
-显示/隐藏打印面板 Shift + CMD + Y
-打开双视图并且在双视图右侧打开文件 Option+鼠标左键单击
-关闭双视图 CMD + Enter
-打开双视图 CMD+ Option + Enter
-根据关键字快速切换到某一文件 CMD +Shift + O
-打开API文档 Option+ 双击
-快速打开方法或者关键字的帮助 Option +单击
-展开项目中的所有文件夹 CMD +Shift + J
-根据苹果自带的词典查看单词 Ctrl +CMD +D
-向前或者向后移动选中的代码 Option +CMD +左右括号
-</code></pre><p>七.个人使用快捷键心得</p>
-<pre><code>不要刻意去记，敲代码的时候，感觉某个地方要用，问问别人，或者去查一下，经常保持慢慢地就记住了。—WackoSix
-</code></pre>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[iOS 常用宏定义]]></title>
-      <url>http://dpcoder.cn/2016/10/22/iOS-%E5%B8%B8%E7%94%A8%E5%AE%8F%E5%AE%9A%E4%B9%89/</url>
-      <content type="html"><![CDATA[<p><img src="http://of89t88ay.bkt.clouddn.com/%E4%BB%A3%E7%A0%81.gif" alt="三个月后看到你自己代码"><br>宏定义在很多方面都会使用,例如定义高度、判断iOS系统、工具类,还有诸如文件路径、服务端api接口文档。</p>
-<p><br><br>1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div></pre></td><td class="code"><pre><div class="line">#define kDevice_Is_iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)  </div><div class="line">```   </div><div class="line">**用途**：  判断用的设备是否是iPhone6，  </div><div class="line">**用于**： IntroductionViewController 》》configureViews  </div><div class="line">2  </div><div class="line"></div><div class="line">```  </div><div class="line">#define kDevice_Is_iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)  </div><div class="line">```  </div><div class="line">**用途**：  判断用的设备是否是iPhone6Plus，  </div><div class="line">**用于**： IntroductionViewController 》》configureViews  </div><div class="line">3  </div><div class="line">  </div><div class="line">```  </div><div class="line">#define kScreen_Height [UIScreen mainScreen].bounds.size.height  </div><div class="line">``` </div><div class="line">**用途**：计算设备的屏幕的高度  </div><div class="line">用于： IntroductionViewController 》》configureViews </div><div class="line">4   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define mas_equalTo(...)                 equalTo(MASBoxValue((__VA_ARGS__)))  </div><div class="line">```   </div><div class="line">**用途**：给一个视图加约束，是第三方库Masonry里的#import &quot;MASUtilities.h&quot;里面的   </div><div class="line">**用于**： IntroductionViewController 》》configureButtonsAndPageControl  </div><div class="line">5  </div><div class="line">  </div><div class="line">```  </div><div class="line">#define kScreen_Width [UIScreen mainScreen].bounds.size.width</div><div class="line">``` </div><div class="line">**用途**：计算设备的屏幕的宽度  </div><div class="line">**用于**： IntroductionViewController 》》configureButtonsAndPageControl  </div><div class="line">6   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kScaleFrom_iPhone5_Desgin(_X_) (_X_ * (kScreen_Width/320))  </div><div class="line">```   </div><div class="line">**用途**：相对于iPhone5 缩放的比例，乘以一个值X ，得到一个值 。用于设置 控件和view的尺寸大小。   </div><div class="line">**用于**： IntroductionViewController 》》configureButtonsAndPageControl  </div><div class="line">##7 LoginViewController  </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_Login2FATipCell @&quot;Login2FATipCell&quot;</div><div class="line">```   </div><div class="line">**用途**：输入用户名和密码那两行是cell，此cell是需要验证码登录的cell,所以这个宏是注册cell时用的标示符  </div><div class="line">**用于**： LoginViewController 》》viewDidLoad  </div><div class="line">8   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_Input_OnlyText_Cell @&quot;Input_OnlyText_Cell&quot;</div><div class="line">```   </div><div class="line">**用途**：输入用户名和密码那两行是cell，这个cell是用xib写出来的，用于绑定cell，tableView从bundle中加载出来cell， 所以这个宏是xib的名字.   </div><div class="line">**用于**： LoginViewController 》》viewDidLoad  </div><div class="line">9   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_Input_OnlyText_Cell @&quot;Input_OnlyText_Cell&quot;</div><div class="line">```   </div><div class="line">**用途**：输入用户名和密码那两行是cell，这个cell是用xib写出来的，用于绑定cell，tableView从bundle中加载出来cell，此cell是不需要验证码登录的cell，所以这个宏是从bundle中加载cell的标示符。  </div><div class="line">**用于**： LoginViewController 》》viewDidLoad  </div><div class="line">10   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kScreen_Bounds [UIScreen mainScreen].bounds</div><div class="line">```   </div><div class="line">**用途**：使用的设备屏幕的bounds  </div><div class="line">**用于**： LoginViewController 》》- (UIImageView *)bgBlurredView  </div><div class="line">11   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_Login2FATipCell @&quot;Login2FATipCell&quot;</div><div class="line">```   </div><div class="line">**用途**：创建需要验证码登录的cell的标示符  </div><div class="line">**用于**： LoginViewController 》》- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath   </div><div class="line">12   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_Input_OnlyText_Cell @&quot;Input_OnlyText_Cell&quot;</div><div class="line">```   </div><div class="line">**用途**：创建不需要输入验证码登录cell的标示符  </div><div class="line">**用于**： LoginViewController 》》- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  </div><div class="line">13   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kLoginPaddingLeftWidth 18.0</div><div class="line">```   </div><div class="line">**用途**：登录界面按钮距离左边屏幕边缘的距离  </div><div class="line">**用于**： LoginViewController 》》- (UIView *)customFooterView  </div><div class="line">14   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define mas_equalTo(...)       equalTo(MASBoxValue((__VA_ARGS__)))</div><div class="line">```   </div><div class="line">**用途**：给一个视图加约束，是第三方库Masonry里的#import &quot;MASUtilities.h&quot;里面的  </div><div class="line">**用于**： LoginViewController 》》- (UIView *)customHeaderView  </div><div class="line"> </div><div class="line">15  </div><div class="line"> </div><div class="line">```  </div><div class="line">#define RAC(TARGET, ...) \</div><div class="line">    metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__)) \</div><div class="line">        (RAC_(TARGET, __VA_ARGS__, nil)) \</div><div class="line">        (RAC_(TARGET, __VA_ARGS__))</div><div class="line">```   </div><div class="line">**用途**： RAC这个宏将一个信号流与一个对象的属性绑在一起，当这个 signal 有新的信号时即 next，这个 next 中的对象value将会被自动赋值到 target 的 keypath 中。第一种方法则带有 nilValue，这是在 next 中的对象value为 nil时，会被赋值给 target 的 keypath 的值。 metamacro_argcount是计算可变参数个数，所以metamacro_if_eq的作用就是判断参数个数，如果个数是1就执行后面的`(RAC_(TARGET, __VA_ARGS__, nil))`，若不是1就执行`(RAC_(TARGET, __VA_ARGS__))`.</div><div class="line">在第三方库ReactiveCocoa里面的RACSubscriptingAssignmentTrampoline.h 里面 </div><div class="line">**用于**： LoginViewController 》》- (UIView *)customFooterView</div><div class="line"></div><div class="line"> </div><div class="line">16   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define RACObserve(TARGET, KEYPATH) \</div><div class="line">    [(id)(TARGET) rac_valuesForKeyPath:@keypath(TARGET, KEYPATH) observer:self]</div><div class="line">```   </div><div class="line">**用途**：RAC()总是出现在等号左边，等号右边是一个RACSignal，表示的意义是将一个对象的一个属性和一个signal绑定，signal每产生一个value（id类型），都会自动执行`[TARGET setValue:value ?: NIL_VALUE forKeyPath:KEYPATH]`。 在第三方库ReactiveCocoa里面的NSObject+RACPropertySubscribing.h  </div><div class="line">**用于**： LoginViewController 》》- (UIView *)customFooterView  </div><div class="line">17   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kTipAlert(_S_, ...)     [[[UIAlertView alloc] initWithTitle:@&quot;提示&quot; message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:@&quot;知道了&quot; otherButtonTitles:nil] show] </div><div class="line">```    </div><div class="line">**用途**：弹出来一个警告框，这个警告框里面显示的内容依据 参数S </div><div class="line">**用于**： LoginViewController 》》- (void)sendLogin </div><div class="line">18   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_Input_OnlyText_Cell @&quot;Input_OnlyText_Cell&quot;</div><div class="line">```   </div><div class="line">**用途**：输入用户名和密码那两行是cell，这个cell是用xib写出来的，用于绑定cell，tableView从bundle中加载出来cell， 所以这个宏是xib的名字.也是cell的标示符   </div><div class="line">**用于**： RegisterViewController 》》viewDidLoad  </div><div class="line">19    </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kColorTableSectionBg [UIColor colorWithHexString:@&quot;0xeeeeee&quot;]</div><div class="line">```    </div><div class="line">**用途**： 这个宏表示  调用了一个生成颜色的方法，根据字符串生成颜色  </div><div class="line">**用于**： RegisterViewController 》》viewDidLoad   </div><div class="line">#####* 20    </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kLinkAttributes     @&#123;(__bridge NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[UIColor colorWithHexString:@&quot;0x3bbd79&quot;].CGColor&#125;</div><div class="line">```    </div><div class="line">**用途**： 链接颜色，引用了第三方库TTTAttributedLabel  </div><div class="line">**用于**： RegisterViewController 》》- (UIView *)customFooterView    </div><div class="line">####* 21  </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kLinkAttributesActive       @&#123;(NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[[UIColor colorWithHexString:@&quot;0x1b9d59&quot;] CGColor]&#125;</div><div class="line">```    </div><div class="line">**用途**： 链接颜色，引用了第三方库TTTAttributedLabel   </div><div class="line">**用于**： RegisterViewController 》》- (UIView *)customFooterView</div><div class="line">22    </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kColorTableSectionBg [UIColor colorWithHexString:@&quot;0xeeeeee&quot;]</div><div class="line">```    </div><div class="line">**用途**： 这个宏表示  调用了一个生成颜色的方法，根据字符串生成颜色  </div><div class="line">**用于**： RegisterViewController 》》viewDidLoad   </div><div class="line">23   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kTipAlert(_S_, ...)     [[[UIAlertView alloc] initWithTitle:@&quot;提示&quot; message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:@&quot;知道了&quot; otherButtonTitles:nil] show] </div><div class="line">```    </div><div class="line">**用途**：弹出来一个警告框，这个警告框里面显示的内容依据 参数S   </div><div class="line">**用于**： RegisterViewController 》》- (void)sendRegister</div><div class="line">##24 CannotLoginViewController   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kColorTableSectionBg [UIColor colorWithHexString:@&quot;0xeeeeee&quot;]</div><div class="line">```    </div><div class="line">**用途**：这个宏表示  调用了一个生成颜色的方法，根据字符串生成颜色    </div><div class="line">**用于**：CannotLoginViewController 》》viewDidLoad   </div><div class="line">25  </div><div class="line"> </div><div class="line">```  </div><div class="line">#define weakify(...) \</div><div class="line">    rac_keywordify \</div><div class="line">    metamacro_foreach_cxt(rac_weakify_,, __weak, __VA_ARGS__)</div><div class="line">```     </div><div class="line">**用途**：  block中防止循环引用的一个高大上的宏定义    </div><div class="line">**用于**： CannotLoginViewController 》》- (void)addChangeBaseURLGesture    </div><div class="line">26</div></pre></td></tr></table></figure>
-<p>#define strongify(…) \<br>    rac_keywordify \<br>    _Pragma(“clang diagnostic push”) \<br>    _Pragma(“clang diagnostic ignored \”-Wshadow\””) \<br>    metamacro_foreach(rac<em>strongify</em>,, <strong>VA_ARGS</strong>) \<br>    _Pragma(“clang diagnostic pop”)<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"> ``` </div><div class="line">    @weakify(self);</div><div class="line">    _myPopMenu.didSelectedItemCompletion = ^(MenuItem *selectedItem)&#123;</div><div class="line">        [MobClick event:kUmeng_Event_Request_ActionOfLocal label:[NSString stringWithFormat:@&quot;快捷创建_%@&quot;, selectedItem.title]];</div><div class="line">        @strongify(self); </div><div class="line">        &#125;</div><div class="line">```    </div><div class="line">**用途**：block中防止循环引用的一个高大上的宏定义    : 先定义了一个 _weak的self_weak_变量   后来局域定义了一个__strong的self指针指向self_weak. `__weak __typeof__(self) __weak_self = self; // @weakify(self)的实际内容`  </div><div class="line">**用于**： CannotLoginViewController 》》- (void)addChangeBaseURLGesture  </div><div class="line">### * 27</div></pre></td></tr></table></figure></p>
-<p>#define RACObserve(TARGET, KEYPATH) \<br>    [(id)(TARGET) rac_valuesForKeyPath:@keypath(TARGET, KEYPATH) observer:self]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div></pre></td><td class="code"><pre><div class="line">**用途**： RAC()总是出现在等号左边，等号右边是一个RACSignal，表示的意义是将一个对象的一个属性和一个signal绑定，signal每产生一个value（id类型），都会自动执行`[TARGET setValue:value ?: NIL_VALUE forKeyPath:KEYPATH]`。 在第三方库ReactiveCocoa里面的NSObject+RACPropertySubscribing.h</div><div class="line">**用于**： CannotLoginViewController 》》- (UIView *)customFooterView   </div><div class="line">##28 BaseViewController   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kColorTableBG [UIColor colorWithHexString:@&quot;0xfafafa&quot;]</div><div class="line">```    </div><div class="line">**用途**：这个宏表示  调用了一个生成颜色的方法，根据字符串生成颜色  </div><div class="line">**用于**：BaseViewController》》- (void)viewDidLoad  </div><div class="line">29   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define DebugLog(s, ...) NSLog(@&quot;%s(%d): %@&quot;, __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])   </div><div class="line">如：DebugLog(@&quot;\ntabBarItemClicked : %@&quot;, NSStringFromClass([self class]));</div><div class="line">```    </div><div class="line">**用途**：程序运行过程中打印调试log  </div><div class="line">**用于**：BaseViewController》》- (void)tabBarItemClicked   </div><div class="line">#### * 30   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCodingAppScheme @&quot;coding-net:&quot;</div><div class="line">```    </div><div class="line">**用途**：Coding App 的专属链接  </div><div class="line">**用于**：BaseViewController》》+ (UIViewController *)analyseVCFromLinkStr:(NSString *)linkStr analyseMethod:(AnalyseMethodType)methodType isNewVC:(BOOL *)isNewVC   </div><div class="line">31   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kBaseUrlStr_Phone @&quot;https://m.coding.net/&quot;</div><div class="line">```    </div><div class="line">**用途**： 手机版地址   </div><div class="line">**用于**： BaseViewController》》+ (UIViewController *)analyseVCFromLinkStr:(NSString *)linkStr analyseMethod:(AnalyseMethodType)methodType isNewVC:(BOOL *)isNewVC   </div><div class="line">##32  RootTabViewController   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define  kBadgeTipStr @&quot;badgeTip&quot;</div><div class="line">```    </div><div class="line">**用途**：  </div><div class="line">**用于**： RootTabViewController 》》- (void)setupViewControllers  </div><div class="line">##33 Project_RootViewController   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kMySegmentControl_Height 44.0</div><div class="line">```    </div><div class="line">**用途**：SegmentControl的高度  </div><div class="line">**用于**：  Project_RootViewController  》》   - (void)viewDidLoad</div><div class="line">### * 34 </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kUmeng_Event_Request_ActionOfLocal @&quot;Request_ActionOfLocal&quot;</div><div class="line">```    </div><div class="line">**用途**：友盟统计里面的  </div><div class="line">**用于**： Project_RootViewController  》》-(void)addItemClicked:(id)sender    </div><div class="line">35   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kKeyWindow [UIApplication sharedApplication].keyWindow</div><div class="line">```    </div><div class="line">**用途**：视图控制器的window  </div><div class="line">**用于**： Project_RootViewController  》》-(void)addItemClicked:(id)sender</div><div class="line">36   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_ProjectList @&quot;ProjectListCell&quot;</div><div class="line">```    </div><div class="line">**用途**：搜索结果是一些 cell,searchResultsTableView上的cell，这个宏是注册cell使用的标示符 </div><div class="line">**用于**： Project_RootViewController  》》 - (void)searchItemClicked:(id)sende  </div><div class="line">37   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kHigher_iOS_6_1 (floor(NSFoundationVersionNumber) &gt; NSFoundationVersionNumber_iOS_6_1)</div><div class="line">```    </div><div class="line">**用途**：iOS系统版本是在6.1之后  </div><div class="line">**用于**：Project_RootViewController  》》 - (void)searchItemClicked:(id)sende  </div><div class="line">38   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_ProjectList @&quot;ProjectListCell&quot;</div><div class="line">```    </div><div class="line">**用途**：搜索结果在cell上展示的，所以这个也是创建cell的标示符  </div><div class="line">**用于**： Project_RootViewController  》》- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  </div><div class="line">39   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kPaddingLeftWidth 15.0</div><div class="line">```    </div><div class="line">**用途**：距离屏幕左边的距离  </div><div class="line">**用于**： Project_RootViewController  》》- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath</div><div class="line">## 40 ProjectListCell </div><div class="line">```  </div><div class="line">#define kProjectListCell_IconHeight 55.0</div><div class="line">```    </div><div class="line">**用途**：  cell 里图片的高度  </div><div class="line">**用于**：ProjectListCell  》》 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier</div><div class="line"></div><div class="line">41   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kProjectListCell_ContentLeft (kPaddingLeftWidth+kProjectListCell_IconHeight+20)</div><div class="line">```    </div><div class="line">**用途**： cell 里面标题等距离屏幕左边的距离。    </div><div class="line">**用于**：  ProjectListCell  》》 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier</div><div class="line">## 42 NewProjectViewController   </div><div class="line"></div><div class="line">```  </div><div class="line"> #define kPlaceholderCodingSquareWidth(_width_) [UIImage imageNamed:[NSString stringWithFormat:@&quot;placeholder_coding_square_%.0f&quot;, _width_]]</div><div class="line">```    </div><div class="line">**用途**： 根据一个数值生成一个图片。UIImage类型的   </div><div class="line">**用于**： NewProjectViewController  》》 - (void)viewDidLoad   </div><div class="line">## 43  EditTaskViewController </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kColorTableSectionBg [UIColor colorWithHexString:@&quot;0xeeeeee&quot;]</div><div class="line">```    </div><div class="line">**用途**： 生成tableViewSection的背景颜色。   </div><div class="line">**用于**：EditTaskViewController 》》   - (void)viewDidLoad  </div><div class="line">44   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kColorTableBG [UIColor colorWithHexString:@&quot;0xfafafa&quot;]</div><div class="line">```    </div><div class="line">**用途**：  生成tableView的背景颜色。  </div><div class="line">**用于**：  EditTaskViewController 》》   - (void)viewDidLoad  </div><div class="line">45   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_TaskContent @&quot;TaskContentCell&quot;</div><div class="line">```    </div><div class="line">**用途**：任务里面，注册出队任务内容的cell标示符。  </div><div class="line">**用于**：  EditTaskViewController 》》   - (void)viewDidLoad  </div><div class="line">46   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_TaskDescriptionCell @&quot;TaskDescriptionCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 任务里面，注册、出队任务描述的cell标示符   </div><div class="line">**用于**：  EditTaskViewController 》》   - (void)viewDidLoad    </div><div class="line">47   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_LeftImage_LRText @&quot;LeftImage_LRTextCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 任务里面，注册、出队任务执行者，优先级，截止日期，阶段等cell的标示符。  </div><div class="line">**用于**：  EditTaskViewController 》》   - (void)viewDidLoad    </div><div class="line">48   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_TaskComment @&quot;TaskCommentCell&quot;</div><div class="line">```    </div><div class="line">**用途**：  任务里面 ，注册、出队 任务评论的cell的标示符    </div><div class="line">**用于**：  EditTaskViewController 》》   - (void)viewDidLoad    </div><div class="line">49   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_TaskComment_Media @&quot;TaskCommentCell_Media&quot;</div><div class="line">```    </div><div class="line">**用途**： 任务里面注册、出队评论那一行cell的 标示符。  </div><div class="line">**用于**： EditTaskViewController 》》   - (void)viewDidLoad  </div><div class="line">50   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_TaskActivityCell @&quot;TaskActivityCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 任务里面注册、出队创建任务时间（即左边有个加号）的cell的标示符   </div><div class="line">**用于**：  EditTaskViewController 》》   - (void)viewDidLoad   </div><div class="line">51   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define ESWeakSelf      ESWeak(self, __weakSelf);</div><div class="line">```    </div><div class="line">**用途**：防止如block的循环引用时，会使用`__weak关键字.  这个地方就是那个作用。相当于__weak typeof(self) weakSelf = self`;  </div><div class="line">**用于**：EditTaskViewController 》》  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath   </div><div class="line">52   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kTaskPrioritiesDisplay @[@&quot;有空再看&quot;, @&quot;正常处理&quot;, @&quot;优先处理&quot;, @&quot;十万火急&quot;]</div><div class="line">```    </div><div class="line">**用途**： 定义了一个数组，是优先级的数组   </div><div class="line">**用于**：  EditTaskViewController 》》  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath   </div><div class="line">53   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define ESStrongSelf    ESStrong(__weakSelf, _self);</div><div class="line">```    </div><div class="line">**用途**： 定义了一个strong类型的self，。   </div><div class="line">**用于**： EditTaskViewController 》》  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  </div><div class="line">## 54 TweetSendViewController</div><div class="line"> </div><div class="line">```      </div><div class="line">#define kCellIdentifier_TweetSendText @&quot;TweetSendTextCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 发冒泡的tablView上的第一行cell是发冒泡的，这个宏表示注册，出队的第一个cell的标示符</div><div class="line">**用于**： TweetSendViewController 》》- (void)viewDidLoad  </div><div class="line">55   </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_TweetSendImages @&quot;TweetSendImagesCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 发冒泡的tablView上的第二行cell是发带图片的冒泡，图片布置在第二个cell上，这个宏表示注册，出队的第二个cell的标示符 </div><div class="line">**用于**：   TweetSendViewController 》》- (void)viewDidLoad   </div><div class="line">## 56 AddUserViewController  </div><div class="line"></div><div class="line">```  </div><div class="line">#define kCellIdentifier_UserCell @&quot;UserCell&quot;</div><div class="line">```    </div><div class="line">**用途**：  添加好友时，输入关键字，会联想出来一些用户。用户的名字展示在cell里面。  </div><div class="line">**用于**： AddUserViewController   - (void)viewDidLoad  </div><div class="line"> </div><div class="line">### 测试地址</div></pre></td></tr></table></figure></p>
-<p>#define kBaseUrlStr_Test @”<a href="https://coding.net/" target="_blank" rel="external">https://coding.net/</a>“<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###  手机版地址</div></pre></td></tr></table></figure></p>
-<p>#define kBaseUrlStr_Phone @”<a href="https://m.coding.net/" target="_blank" rel="external">https://m.coding.net/</a>“<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### Coding App 的专属链接</div></pre></td></tr></table></figure></p>
-<p>#define kCodingAppScheme @”coding-net:”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### appStore地址</div></pre></td></tr></table></figure></p>
-<p>#define kAppUrl  @”<a href="http://itunes.apple.com/app/id923676989" target="_blank" rel="external">http://itunes.apple.com/app/id923676989</a>“<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">#define kAppReviewURL   @&quot;itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&amp;id=923676989&quot;</div></pre></td></tr></table></figure></p>
-<p>##3 版本号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kVersion_Coding [[NSBundle mainBundle] objectForInfoDictionaryKey:@&quot;CFBundleShortVersionString&quot;]</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kVersionBuild_Coding [[NSBundle mainBundle] objectForInfoDictionaryKey:@&quot;CFBundleVersion&quot;]</div></pre></td></tr></table></figure>
-<h2 id="常用变量"><a href="#常用变量" class="headerlink" title="常用变量"></a>常用变量</h2><h4 id="程序运行过程中打印调试log"><a href="#程序运行过程中打印调试log" class="headerlink" title="程序运行过程中打印调试log"></a>程序运行过程中打印调试log</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define DebugLog(s, ...) NSLog(@&quot;%s(%d): %@&quot;, __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])</div></pre></td></tr></table></figure>
-<h4 id="定义宏表示-一个通用的警告的"><a href="#定义宏表示-一个通用的警告的" class="headerlink" title="定义宏表示 一个通用的警告的"></a>定义宏表示 一个通用的警告的</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kTipAlert(_S_, ...)     [[[UIAlertView alloc] initWithTitle:@&quot;提示&quot; message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:@&quot;知道了&quot; otherButtonTitles:nil] show]</div></pre></td></tr></table></figure>
-<h4 id="得到应用的window"><a href="#得到应用的window" class="headerlink" title="得到应用的window"></a>得到应用的window</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kKeyWindow [UIApplication sharedApplication].keyWindow</div></pre></td></tr></table></figure>
-<h4 id="判断ios版本是否高于或者低于多少"><a href="#判断ios版本是否高于或者低于多少" class="headerlink" title="判断ios版本是否高于或者低于多少"></a>判断ios版本是否高于或者低于多少</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#define kHigher_iOS_6_1 (floor(NSFoundationVersionNumber) &gt; NSFoundationVersionNumber_iOS_6_1) </div><div class="line">#define kHigher_iOS_6_1_DIS(_X_) ([[NSNumber numberWithBool:kHigher_iOS_6_1] intValue] * _X_)</div><div class="line">#define kNotHigher_iOS_6_1_DIS(_X_) (-([[NSNumber numberWithBool:kHigher_iOS_6_1] intValue]-1) * _X_)</div></pre></td></tr></table></figure>
-<h4 id="判断设备是否为iPhone几"><a href="#判断设备是否为iPhone几" class="headerlink" title="判断设备是否为iPhone几"></a>判断设备是否为iPhone几</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#define kDevice_Is_iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)</div><div class="line">#define kDevice_Is_iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)</div><div class="line">#define kDevice_Is_iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)</div></pre></td></tr></table></figure>
-<h4 id="定义出来屏幕bounds-height-width-以及一些特殊的控件尺寸，宽，高等"><a href="#定义出来屏幕bounds-height-width-以及一些特殊的控件尺寸，宽，高等" class="headerlink" title="定义出来屏幕bounds,height,width,以及一些特殊的控件尺寸，宽，高等"></a>定义出来屏幕bounds,height,width,以及一些特殊的控件尺寸，宽，高等</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#define kScreen_Bounds [UIScreen mainScreen].bounds</div><div class="line">#define kScreen_Height [UIScreen mainScreen].bounds.size.height</div><div class="line">#define kScreen_Width [UIScreen mainScreen].bounds.size.width</div><div class="line">#define kPaddingLeftWidth 15.0</div><div class="line">#define kLoginPaddingLeftWidth 18.0</div><div class="line">#define kMySegmentControl_Height 44.0</div><div class="line">#define kMySegmentControlIcon_Height 70.0</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#define  kBackButtonFontSize 16</div><div class="line">#define  kNavTitleFontSize 18</div><div class="line">#define  kBadgeTipStr @&quot;badgeTip&quot;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kDefaultLastId [NSNumber numberWithInteger:99999999]</div></pre></td></tr></table></figure>
-<h4 id="根据一个数值生成一种颜色，调用一个颜色的类别里的类方法。"><a href="#根据一个数值生成一种颜色，调用一个颜色的类别里的类方法。" class="headerlink" title="根据一个数值生成一种颜色，调用一个颜色的类别里的类方法。"></a>根据一个数值生成一种颜色，调用一个颜色的类别里的类方法。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#define kColor999 [UIColor colorWithHexString:@&quot;0x999999&quot;]</div><div class="line">#define kColorTableBG [UIColor colorWithHexString:@&quot;0xfafafa&quot;]</div><div class="line">#define kColorTableSectionBg [UIColor colorWithHexString:@&quot;0xeeeeee&quot;]</div></pre></td></tr></table></figure>
-<h4 id="根据一个颜色生成一个一张图片"><a href="#根据一个颜色生成一个一张图片" class="headerlink" title="根据一个颜色生成一个一张图片"></a>根据一个颜色生成一个一张图片</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kImage999 [UIImage imageWithColor:kColor999]</div></pre></td></tr></table></figure>
-<h4 id="根据一个数值生成一个图片。UIImage类型的"><a href="#根据一个数值生成一个图片。UIImage类型的" class="headerlink" title="根据一个数值生成一个图片。UIImage类型的"></a>根据一个数值生成一个图片。UIImage类型的</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#define kPlaceholderMonkeyRoundWidth(_width_) [UIImage imageNamed:[NSString stringWithFormat:@&quot;placeholder_monkey_round_%.0f&quot;, _width_]]</div><div class="line">#define kPlaceholderMonkeyRoundView(_view_) [UIImage imageNamed:[NSString stringWithFormat:@&quot;placeholder_monkey_round_%.0f&quot;, CGRectGetWidth(_view_.frame)]]</div><div class="line">#define kPlaceholderCodingSquareWidth(_width_) [UIImage imageNamed:[NSString stringWithFormat:@&quot;placeholder_coding_square_%.0f&quot;, _width_]]</div><div class="line">#define kPlaceholderCodingSquareView(_view_) [UIImage imageNamed:[NSString stringWithFormat:@&quot;placeholder_coding_square_%.0f&quot;, CGRectGetWidth(_view_.frame)]]</div></pre></td></tr></table></figure>
-<h4 id="相对于iPhone5-缩放的比例，乘以一个值X-，得到一个值-。用于设置-控件和view的尺寸大小。"><a href="#相对于iPhone5-缩放的比例，乘以一个值X-，得到一个值-。用于设置-控件和view的尺寸大小。" class="headerlink" title="相对于iPhone5 缩放的比例，乘以一个值X ，得到一个值 。用于设置 控件和view的尺寸大小。"></a>相对于iPhone5 缩放的比例，乘以一个值X ，得到一个值 。用于设置 控件和view的尺寸大小。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kScaleFrom_iPhone5_Desgin(_X_) (_X_ * (kScreen_Width/320))</div></pre></td></tr></table></figure>
-<h4 id="未读消息，未读消息数量，类型，如：艾特，评论，系统消息等等的"><a href="#未读消息，未读消息数量，类型，如：艾特，评论，系统消息等等的" class="headerlink" title="未读消息，未读消息数量，类型，如：艾特，评论，系统消息等等的"></a>未读消息，未读消息数量，类型，如：艾特，评论，系统消息等等的</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#define kUnReadKey_messages @&quot;messages&quot;</div><div class="line">#define kUnReadKey_notifications @&quot;notifications&quot;</div><div class="line">#define kUnReadKey_project_update_count @&quot;project_update_count&quot;</div><div class="line">#define kUnReadKey_notification_AT @&quot;notification_at&quot;</div><div class="line">#define kUnReadKey_notification_Comment @&quot;notification_comment&quot;</div><div class="line">#define kUnReadKey_notification_System @&quot;notification_system&quot;</div></pre></td></tr></table></figure>
-<h2 id="链接颜色"><a href="#链接颜色" class="headerlink" title="链接颜色"></a>链接颜色</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#define kLinkAttributes     @&#123;(__bridge NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[UIColor colorWithHexString:@&quot;0x3bbd79&quot;].CGColor&#125;</div><div class="line">#define kLinkAttributesActive       @&#123;(NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[[UIColor colorWithHexString:@&quot;0x1b9d59&quot;] CGColor]&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kTaskPrioritiesDisplay @[@&quot;有空再看&quot;, @&quot;正常处理&quot;, @&quot;优先处理&quot;, @&quot;十万火急&quot;]</div></pre></td></tr></table></figure>
-<h4 id="防止如block的循环引用，定义一些weak和strong类型的数据。"><a href="#防止如block的循环引用，定义一些weak和strong类型的数据。" class="headerlink" title="防止如block的循环引用，定义一些weak和strong类型的数据。"></a>防止如block的循环引用，定义一些<strong>weak和</strong>strong类型的数据。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#define ESWeak(var, weakVar) __weak __typeof(&amp;*var) weakVar = var</div><div class="line">#define ESStrong_DoNotCheckNil(weakVar, _var) __typeof(&amp;*weakVar) _var = weakVar</div><div class="line">#define ESStrong(weakVar, _var) ESStrong_DoNotCheckNil(weakVar, _var); if (!_var) return;</div><div class="line">#define ESWeak_(var) ESWeak(var, weak_##var);</div><div class="line">#define ESStrong_(var) ESStrong(weak_##var, _##var);</div><div class="line">/** defines a weak `self` named `__weakSelf` */</div><div class="line">#define ESWeakSelf      ESWeak(self, __weakSelf);</div><div class="line">/** defines a strong `self` named `_self` from `__weakSelf` */</div><div class="line">#define ESStrongSelf    ESStrong(__weakSelf, _self);</div></pre></td></tr></table></figure>
-<h2 id="NProjectViewController-m"><a href="#NProjectViewController-m" class="headerlink" title="NProjectViewController.m"></a>NProjectViewController.m</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#define kCellIdentifier_ProjectInfoCell @&quot;ProjectInfoCell&quot;</div><div class="line">#define kCellIdentifier_ProjectDescriptionCell @&quot;ProjectDescriptionCell&quot;</div><div class="line">#define kCellIdentifier_NProjectItemCell @&quot;NProjectItemCell&quot;</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：用于设置注册，出队不同的cell，第一个是指带有项目图片标题等那一cell，第二个是指项目描述那一cell，第三个是指以下那些所有的cell，包括，代码，动态，任务，readme等等。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define EaseGitButtonsView_Height 49.0</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：得到下面那一行（含有收藏，关注等）btn的高度。</p>
-<h2 id="ProjectListView-m"><a href="#ProjectListView-m" class="headerlink" title="ProjectListView.m"></a>ProjectListView.m</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kCellIdentifier_ProjectListTaCell @&quot;ProjectListTaCell&quot;</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：</p>
-<h2 id="ProjectListTaCell-m"><a href="#ProjectListTaCell-m" class="headerlink" title="ProjectListTaCell.m"></a>ProjectListTaCell.m</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#define kCellIdentifier_ProjectListTaCell @&quot;ProjectListTaCell&quot;</div><div class="line">#define kProjectListTaCell_IconWidth 55</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：</p>
-<ol>
-<li>注册，出队另一cell的标示符，在我-》我的项目里面的那种cell </li>
-<li>里面项目图片的高度</li>
-</ol>
-<h2 id="ForkTreeViewController-m"><a href="#ForkTreeViewController-m" class="headerlink" title="ForkTreeViewController.m"></a>ForkTreeViewController.m</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kCellIdentifier_ForkTreeCell @&quot;ForkTreeCell&quot;</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：一个项目中fork人数的列表了，这个宏表示注册，出队cell的标示符。</p>
-<h2 id="MRPRListViewController-m"><a href="#MRPRListViewController-m" class="headerlink" title="MRPRListViewController.m"></a>MRPRListViewController.m</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#define kCellIdentifier_MRPRListCell @&quot;MRPRListCell&quot;</div><div class="line">#define kMRPRListViewController_BottomViewHeight 49.0</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：</p>
-<ol>
-<li>需要合并或者推到别人的分支处理 的列表的cell的标示符</li>
-<li>下面open ,close 这个控件的高度。<h2 id="Login-m"><a href="#Login-m" class="headerlink" title="Login.m"></a>Login.m</h2></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#define kLoginStatus @&quot;login_status&quot;</div><div class="line">#define kLoginPreUserEmail @&quot;pre_user_email&quot;</div><div class="line">#define kLoginUserDict @&quot;user_dict&quot;</div><div class="line">#define kLoginDataListPath @&quot;login_data_list_path.plist&quot;</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：登录里面需要的一些数据信息，状态，文件名字等。</p>
-<h2 id="ProjectActivityListView-m"><a href="#ProjectActivityListView-m" class="headerlink" title="ProjectActivityListView.m"></a>ProjectActivityListView.m</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kCellIdentifier_ProjectActivityList @&quot;ProjectActivityListCell&quot;</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：动态里面，注册，出队cell的标示符</p>
-<h2 id="ProjectActivityListCell-m"><a href="#ProjectActivityListCell-m" class="headerlink" title="ProjectActivityListCell.m"></a>ProjectActivityListCell.m</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#define kProjectActivityListCell_IconHeight 33.0</div><div class="line">#define kProjectActivityListCell_TimeIconWidth 13.0</div><div class="line">#define kProjectActivityListCell_TimeLineWidth 2.0</div><div class="line">#define kProjectActivityListCell_LeftPading 85</div><div class="line">#define kProjectActivityListCell_RightPading kPaddingLeftWidth</div><div class="line">#define kProjectActivityListCell_UpDownPading kScaleFrom_iPhone5_Desgin(10)</div><div class="line">#define kProjectActivityListCell_TextPading 5.0</div><div class="line">#define kProjectActivityListCell_MaxActionHeight 80.0</div><div class="line">#define kProjectActivityListCell_MaxContentHeight 64.0</div><div class="line">#define kProjectActivityListCell_TimeHeight 12.0</div><div class="line">#define kProjectActivityListCell_ContentWidth (kScreen_Width - kProjectActivityListCell_LeftPading - kProjectActivityListCell_RightPading)</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：定义这个视图上图片，标题等的宽高，边距，间距等。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#define kProjectActivityListCell_ActionFont [UIFont systemFontOfSize:15]</div><div class="line">#define kProjectActivityListCell_ContentFont [UIFont systemFontOfSize:13]</div><div class="line">#define kProjectActivityListCell_TimeFont [UIFont systemFontOfSize:11</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：各种字体大小。</p>
-<h2 id="ProjectTaskListViewCell"><a href="#ProjectTaskListViewCell" class="headerlink" title="ProjectTaskListViewCell"></a>ProjectTaskListViewCell</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kCellIdentifier_ProjectTaskList @&quot;ProjectTaskListViewCell&quot;</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：任务列表的cell的标示符</p>
-<h2 id="ProjectTaskListViewCell-1"><a href="#ProjectTaskListViewCell-1" class="headerlink" title="ProjectTaskListViewCell"></a>ProjectTaskListViewCell</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#define kProjectTaskListViewCell_LeftPading 93.0</div><div class="line">#define kProjectTaskListViewCell_RightPading 10.0</div><div class="line">#define kProjectTaskListViewCell_CheckBoxWidth 20.0</div><div class="line">#define kProjectTaskListViewCell_UserIconWidth 33.0</div><div class="line">#define kProjectTaskListViewCell_UpDownPading 10.0</div><div class="line">#define kProjectTaskListViewCell_MaxContentHeight 20.0</div><div class="line">#define kProjectTaskListViewCell_ContentWidth (kScreen_Width - kProjectTaskListViewCell_LeftPading - kProjectTaskListViewCell_RightPading)</div><div class="line">#define kProjectTaskListViewCell_TextPading 10.0</div><div class="line">#define kProjectTaskListViewCell_ContentFont [UIFont systemFontOfSize:15]</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：任务列表里面，各个视图的宽高，以及间距，边距等。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define kProjectTaskListViewCellTagsView_Font [UIFont systemFontOfSize:12]</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：字体大小。</p>
-<h2 id="UIMessageInputView"><a href="#UIMessageInputView" class="headerlink" title="UIMessageInputView"></a>UIMessageInputView</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#define kKeyboardView_Height 216.0</div><div class="line">#define kMessageInputView_Height 50.0</div><div class="line">#define kMessageInputView_HeightMax 120.0</div><div class="line">#define kMessageInputView_PadingHeight 7.0</div><div class="line">#define kMessageInputView_Width_Tool 35.0</div><div class="line">#define kMessageInputView_MediaPadding 1.0</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：一些视图，控件等的宽高，间距，间距等</p>
-<h2 id="AudioVolumeView"><a href="#AudioVolumeView" class="headerlink" title="AudioVolumeView"></a>AudioVolumeView</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#define kAudioVolumeViewVolumeWidth 2.0f</div><div class="line">#define kAudioVolumeViewVolumeMinHeight 3.0f</div><div class="line">#define kAudioVolumeViewVolumeMaxHeight 16.0f</div><div class="line">#define kAudioVolumeViewVolumePadding 2.0f</div><div class="line">#define kAudioVolumeViewVolumeNumber 10</div><div class="line">#define kAudioVolumeViewWidth (kAudioVolumeViewVolumeWidth*kAudioVolumeViewVolumeNumber+kAudioVolumeViewVolumePadding*(kAudioVolumeViewVolumeNumber-1))</div><div class="line">#define kAudioVolumeViewHeight kAudioVolumeViewVolumeMaxHeight</div></pre></td></tr></table></figure>
-<p><strong>用途</strong>：音量调节大小时那个音量柱的宽，高，以及里面小柱的宽高等。  </p>
-<h2 id="ProjectMemberListViewController"><a href="#ProjectMemberListViewController" class="headerlink" title="ProjectMemberListViewController"></a>ProjectMemberListViewController</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#define kCellIdentifier_MemberCell @&quot;MemberCell&quot;</div><div class="line">```  </div><div class="line">**用途**： 项目成员里面，成员列表cell的标示符</div><div class="line"></div><div class="line">## MemberCell</div></pre></td></tr></table></figure>
-<p>#define kMemberCell_MaxWidthForName (kScreen_Width - 60 - 100)</p>
-<p>#define kMemberCell_FontForName [UIFont systemFontOfSize:17]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 成员名字的宽度，名字字体的大小</div><div class="line"></div><div class="line">## ConversationViewController</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_Message @”MessageCell”</p>
-<p>#define kCellIdentifier_MessageMedia @”MessageMediaCell”</p>
-<p>#define kCellIdentifier_MessageVoice @”MessageVoiceCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**：私信时，私信消息是语音，文字等不同形式，那么需要注册不同的cell，这些宏表示不同cell的标示符。</div><div class="line"> </div><div class="line">## UserInfoViewController</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_UserInfoTextCell @”UserInfoTextCell”</p>
-<p>#define kCellIdentifier_UserInfoIconCell @”UserInfoIconCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 在 “我” 里面注册不同cell的标示符</div><div class="line"></div><div class="line">## UserTweetsViewController</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_Tweet @”TweetCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 冒泡里面冒泡列表的标示符</div><div class="line"></div><div class="line">## UserCell</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_UserCell @”UserCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 添加，或者查看自己好友列表的时候，注册出队cell的标示符</div><div class="line"></div><div class="line">## TitleDisclosureCell</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_TitleDisclosure @”TitleDisclosureCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 设置里面 注册cell的标示符</div><div class="line"></div><div class="line">## SettingAccountViewController</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_TitleValue @”TitleValueCell”</p>
-<p>#define kCellIdentifier_TitleDisclosure @”TitleDisclosureCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 账号信息 里面不同cell的标示符</div><div class="line"></div><div class="line">## TaskActivityCell</div></pre></td></tr></table></figure></p>
-<p>#define kTaskActivityCell_LeftContentPading (kPaddingLeftWidth + 40)</p>
-<p>#define kTaskActivityCell_ContentWidth (kScreen_Width - kTaskActivityCell_LeftContentPading - kPaddingLeftWidth)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 视图的边距，宽等</div><div class="line"></div><div class="line">## TopicCommentCell</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_TopicComment @”TopicCommentCell”</p>
-<p>#define kCellIdentifier_TopicComment_Media @”TopicCommentCell_Media”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 评论里面两种不同的标示符</div><div class="line"></div><div class="line">## TagCCell</div></pre></td></tr></table></figure></p>
-<p>#define kCCellIdentifier_Tag @”TagCCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**：标签的视图是集合视图，这是集合视图cell的标示符</div><div class="line"> </div><div class="line">## UserInfoDetailTagCell</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_UserInfoDetailUserCell @”UserInfoDetailUserCell”</p>
-<p>#define kCellIdentifier_TitleValue @”TitleValueCell”</p>
-<p>#define kCellIdentifier_UserInfoDetailTagCell @”UserInfoDetailTagCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 个人信息里，带有头像一栏cell，中间那几栏的cell，以及个性标签那一栏的cell的标示符</div><div class="line"></div><div class="line">## EaseUserHeaderView</div></pre></td></tr></table></figure></p>
-<p>#define EaseUserHeaderView_Height_Me kScaleFrom_iPhone5_Desgin(190)</p>
-<p>#define EaseUserHeaderView_Height_Other kScaleFrom_iPhone5_Desgin(250)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 我主页，别人主页头像的高度</div><div class="line"></div><div class="line">## CSTopiclistView</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_TopicList @”TopicListCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 话题cell的标示符</div><div class="line"></div><div class="line">## PointRecordsViewController</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_PointTopCell @”PointTopCell”</p>
-<p>#define kCellIdentifier_PointShopCell @”PointShopCell”</p>
-<p>#define kCellIdentifier_PointRecordCell @”PointRecordCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 分别为“ 我的码币 ” 里面的三种cell的标示符。按顺序罗列</div><div class="line"></div><div class="line">## CodingShareView</div></pre></td></tr></table></figure></p>
-<p>#define kCodingShareView_NumPerLine 4</p>
-<p>#define kCodingShareView_TopHeight 60.0</p>
-<p>#define kCodingShareView_BottomHeight 60.0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">**用途**： 1、每一行上的摆放四个分享图标 2和3、图标居分享视图的上部和底部的高度。</div><div class="line"></div><div class="line"></div><div class="line">## TweetSendViewController</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_TweetSendText @”TweetSendTextCell”</p>
-<p>#define kCellIdentifier_TweetSendImages @”TweetSendImagesCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 发冒泡的标示符， 一个是自己发的，另外一个的是发冒泡的下面带大图表情的cell的标示符</div><div class="line"></div><div class="line">## TweetSendImageCCell</div></pre></td></tr></table></figure></p>
-<p>#define kCCellIdentifier_TweetSendImage @”TweetSendImageCCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 发冒泡里面带大表情的是集合视图，里面的cell的标示符</div><div class="line"></div><div class="line">## ProjectTagsView</div></pre></td></tr></table></figure></p>
-<p>#define kProjectTagsView_Padding_Icon 22.0</p>
-<p>#define kProjectTagsView_Height_PerLine 30.0</p>
-<p>#define kProjectTagsViewLabel_Font [UIFont systemFontOfSize:12]</p>
-<p>#define kProjectTagsViewLabel_Height_Content 22.0</p>
-<p>#define kProjectTagsViewLabel_MinWidth 44.0</p>
-<p>#define kProjectTagsViewLabel_Padding_Content 10.0</p>
-<p>#define kProjectTagsViewLabel_Padding_Space 5.0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 项目任务里面标签视图的间隔，宽高，图片的间隔，线条的高度，标签字体大小等等</div><div class="line"> </div><div class="line">## TaskContentCell</div></pre></td></tr></table></figure></p>
-<p>#define kTaskContentCell_ContentHeightMin kScaleFrom_iPhone5_Desgin(90.0)</p>
-<p>#define kTextView_Pading 8.0</p>
-<p>#define kTaskContentCell_ContentWidth (kScreen_Width-kPaddingLeftWidth-kPaddingLeftWidth + 2*kTextView_Pading)</p>
-<p>#define kTaskContentCell_ContentFont [UIFont systemFontOfSize:18]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">**用途**： 任务内容cell的高度，间隔，宽度，字体大小等。</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_TaskContent @”TaskContentCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 任务内容那一cell的标示符。</div><div class="line"></div><div class="line">## TweetCell</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_Tweet @”TweetCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">**用途**：冒泡列表里面各个冒泡消息是cell，这个宏是cell的标示符</div></pre></td></tr></table></figure></p>
-<p>#define kTweetCell_PadingLeft kPaddingLeftWidth</p>
-<p>#define kTweetCell_PadingTop (65 + 15)</p>
-<p>#define kTweetCell_PadingBottom 10.0</p>
-<p>#define kTweetCell_ContentWidth (kScreen_Width -kTweetCell_PadingLeft - kPaddingLeftWidth)</p>
-<p>#define kTweetCell_LikeComment_Height 27.0</p>
-<p>#define kTweetCell_LikeComment_Width 50.0</p>
-<p>#define kTweetCell_LikeUserCCell_Height 26.0</p>
-<p>#define kTweetCell_LikeUserCCell_Pading 10.0</p>
-<p>#define kTweet_ContentFont [UIFont systemFontOfSize:16]</p>
-<p>#define kTweet_ContentMaxHeight 200.0</p>
-<p>#define kTweet_CommentFont [UIFont systemFontOfSize:14]</p>
-<p>#define kTweet_TimtFont [UIFont systemFontOfSize:12]</p>
-<p>#define kTweet_LikeUsersLineCount 7.0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">**用途**： 冒泡cell的边距，距上，距下的距离，以及内容的宽高，评论的高度，宽度，点赞用户头像一行cell的高度，以及间距，冒泡内容的字体大小，内容的最大高度，评论，时间等字体的大小。</div></pre></td></tr></table></figure></p>
-<p>#define kCCellIdentifier_TweetLikeUser @”TweetLikeUserCCell”</p>
-<p>#define kCellIdentifier_TweetComment @”TweetCommentCell”</p>
-<p>#define kCellIdentifier_TweetCommentMore @”TweetCommentMoreCell”</p>
-<p>#define kCCellIdentifier_TweetMediaItem @”TweetMediaItemCCell”</p>
-<p>#define kCCellIdentifier_TweetMediaItemSingle @”TweetMediaItemSingleCCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 冒泡里面各种cell的标示符</div><div class="line"></div><div class="line">## TweetCommentCell</div></pre></td></tr></table></figure></p>
-<p>#define kTweet_CommentFont [UIFont systemFontOfSize:14]</p>
-<p>#define kTweetCommentCell_LeftOrRightPading 10.0</p>
-<p>#define kTweetCommentCell_ContentWidth (kScreen_Width -kPaddingLeftWidth - kPaddingLeftWidth - 2*kTweetCommentCell_LeftOrRightPading)</p>
-<p>#define kTweetCommentCell_ContentMaxHeight 105.0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 评论里字体的大小，以及距屏幕左右边的距离，内容的宽度，最大高度</div><div class="line"></div><div class="line">## TweetMediaItemSingleCCell</div></pre></td></tr></table></figure></p>
-<p>#define kTweetMediaItemCCellSingle_Width (0.6 *kScreen_Width)</p>
-<p>#define kTweetMediaItemCCellSingle_WidthMonkey ((kScreen_Width - 36.0)/3.0)</p>
-<p>#define kTweetMediaItemCCellSingle_MaxHeight (0.5 *kScreen_Height)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div></pre></td><td class="code"><pre><div class="line">**用途**： 冒泡里面一个图片的时候，cell的宽，系统图片monkey的宽 ，最大的高度</div><div class="line">## TweetMediaItemCCell  </div><div class="line">```  </div><div class="line">#define kTweetMediaItemCCell_Width ((kScreen_Width - 36.0)/3.0)</div><div class="line">```    </div><div class="line">**用途**： 冒泡里面超过一张图片的时候，是一个集合视图，这个宏表示每个cell的宽</div><div class="line"></div><div class="line">##  TweetDetailCell</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kTweetDetailCell_PadingLeft 60.0</div><div class="line">#define kTweet_TimtFont [UIFont systemFontOfSize:12]</div><div class="line">#define kTweetDetailCell_LikeComment_Height 27.0</div><div class="line">#define kTweetDetailCell_LikeComment_Width 50.0</div><div class="line">#define kTweetDetailCell_ContentWidth (kScreen_Width - 2*kPaddingLeftWidth)</div><div class="line">#define kTweetDetailCell_PadingTop 55.0</div><div class="line">#define kTweetDetailCell_PadingBottom 10.0</div><div class="line">#define kTweetDetailCell_LikeUserCCell_Height 25.0</div><div class="line">#define kTweetDetailCell_LikeUserCCell_Pading 10.0</div><div class="line">#define kTweetDetailCell_LikeNumMax (kDevice_Is_iPhone6Plus? 12: kDevice_Is_iPhone6? 11: 9)</div><div class="line">```    </div><div class="line">**用途**： 冒泡详情里面，各种视图的宽高，边距，间距等</div><div class="line"> </div><div class="line">## TopicDetailViewController</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_TopicContent @&quot;TopicContentCell&quot;</div><div class="line">#define kCellIdentifier_TopicComment @&quot;TopicCommentCell&quot;</div><div class="line">#define kCellIdentifier_TopicComment_Media @&quot;TopicCommentCell_Media&quot;</div><div class="line">```    </div><div class="line">**用途**： 讨论内容的cell的标示符； 评论里的cell的标示符，一个是 普通tableViewcell的标示符，一个带有集合视图的tableViewCell的标示符,</div><div class="line"> </div><div class="line">## TopicCommentCCell  </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCCellIdentifier_TopicCommentCCell @&quot;TopicCommentCCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 讨论里面评论的 里带图片的单元格里集合视图的cell的标示符</div><div class="line">  </div><div class="line">##  EditTopicViewController</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_TopicPreviewCell @&quot;TopicPreviewCell&quot;</div><div class="line">```    </div><div class="line"></div><div class="line">**用途**：编辑讨论 预览的时候的 的cell的标示符</div><div class="line"> </div><div class="line">##  EditLabelViewController </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_EditLabelHeadCell @&quot;EditLabelHeadCell&quot;</div><div class="line">#define kCellIdentifier_EditLabelCell @&quot;EditLabelCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 标签管理里面 标签头和 选择标签的 各个cell的标示符</div><div class="line"> </div><div class="line">##  ProjectFolderListCell </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kProjectFolderListCell_IconWidth 45.0</div><div class="line">#define kProjectFolderListCell_LeftPading (kPaddingLeftWidth +kProjectFolderListCell_IconWidth +20.0)</div><div class="line">```    </div><div class="line">**用途**： 文件夹列表cell里的图片，以及文件夹名字距屏幕左边的距离 </div><div class="line">  </div><div class="line">##  ProjectFolderListView</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_ProjectFolderList @&quot;ProjectFolderListCell&quot;</div><div class="line">```    </div><div class="line">**用途**：文件夹列表的cell的标示符 </div><div class="line"> </div><div class="line">##  ProjectCodeListView </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_ProjectCodeList @&quot;ProjectCodeListCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 代码列表的cell的标示符</div><div class="line"> </div><div class="line">##  ProjectCodeListCell </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCode_IconViewWidth 25.0</div><div class="line">#define kCode_ContentLeftPading (kPaddingLeftWidth+kCode_IconViewWidth+10)</div><div class="line">```    </div><div class="line">**用途**：  代码列表cell里面的图片，以及内容名字距屏幕左边的距离 </div><div class="line">  </div><div class="line">##   CodeBranchTagButton</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_BranchTag @&quot;UITableViewCell&quot;</div><div class="line">#define kCodeBranchTagButton_NavHeight 44.0</div><div class="line">#define kCodeBranchTagButton_ContentHeight (kScreen_Height/2)</div><div class="line">#define DEGREES_TO_RADIANS(angle) ((angle)/180.0 *M_PI)</div><div class="line">```    </div><div class="line">**用途**： 分支标签列表的标示符，标签按钮导航栏的高度，内容的高度，得到旋转所需要的角度</div><div class="line"> </div><div class="line">##   CommitListCell</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_CommitListCell @&quot;CommitListCell&quot;</div><div class="line">#define kCommitListCell_UserWidth 33.0</div><div class="line">```    </div><div class="line">**用途**： 提交列表cell的标示符，用户头像的宽度</div><div class="line"> </div><div class="line">##  CommitFilesViewController </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_FileChangesIntroduceCell @&quot;FileChangesIntroduceCell&quot;</div><div class="line">#define kCellIdentifier_FileChangeListCell @&quot;FileChangeListCell&quot;</div><div class="line">#define kCellIdentifier_CommitContentCell @&quot;CommitContentCell&quot;</div><div class="line">#define kCellIdentifier_CommitCommentCell @&quot;CommitCommentCell&quot;</div><div class="line">#define kCellIdentifier_CommitCommentCell_Media @&quot;CommitCommentCell_Media&quot;</div><div class="line">#define kCellIdentifier_AddCommentCell @&quot;AddCommentCell&quot;</div><div class="line">```    </div><div class="line">**用途**：提交记录详情里面的各种cell的列表的标示符 </div><div class="line">  </div><div class="line">##  FileListViewController</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_FileListUpload @&quot;FileListUploadCell&quot;</div><div class="line">#define kCellIdentifier_FileListFolder @&quot;FileListFolderCell&quot;</div><div class="line">#define kCellIdentifier_FileListFile @&quot;FileListFileCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 文件夹以及文件视图控制器里列表cell的标示符</div><div class="line">##  FileListFolderCell</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kFileListFolderCell_IconWidth 45.0</div><div class="line">#define kFileListFolderCell_LeftPading (kPaddingLeftWidth +kFileListFolderCell_IconWidth +20.0)</div><div class="line">#define kFileListFolderCell_TopPading 15.0</div><div class="line">```    </div><div class="line">**用途**：文件夹列表的图片宽度，文件夹名称距左边的距离，距上边的距离 </div><div class="line"> </div><div class="line">## FileListFileCell  </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kFileListFileCell_IconWidth 45.0</div><div class="line">#define kFileListFileCell_LeftPading (kPaddingLeftWidth +kFileListFileCell_IconWidth +20.0)</div><div class="line">#define kFileListFileCell_TopPading 10.0</div><div class="line">```    </div><div class="line">**用途**：文件列表的图片宽度，文件名称距左边的距离，距上边的距离 </div><div class="line">  </div><div class="line">## FileActivitiesViewController</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_FileCommentCell @&quot;FileCommentCell&quot;</div><div class="line">#define kCellIdentifier_FileCommentCell_Media @&quot;FileCommentCell_Media&quot;</div><div class="line">#define kCellIdentifier_FileActivityCell @&quot;FileActivityCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 文件动态里各种cell的标示符，评论类型，以及文件动态的cell。</div><div class="line"> </div><div class="line">##  MRPRCommentCCell </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCCellIdentifier_MRPRCommentCCell @&quot;MRPRCommentCCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 代码评论里的面的cell里面的集合视图cell的标示符</div><div class="line"> </div><div class="line">##  MRPRDetailViewController</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_MRPRTopCell @&quot;MRPRTopCell&quot;</div><div class="line">#define kCellIdentifier_MRPRDetailCell @&quot;MRPRDetailCell&quot;</div><div class="line">#define kCellIdentifier_MRPRDisclosureCell @&quot;MRPRDisclosureCell&quot;</div><div class="line">#define kCellIdentifier_MRPRCommentCell @&quot;MRPRCommentCell&quot;</div><div class="line">#define kCellIdentifier_MRPRCommentCell_Media @&quot;MRPRCommentCell_Media&quot;</div><div class="line">#define kCellIdentifier_AddCommentCell @&quot;AddCommentCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 合并详情里面 各种cell的标示符，以及collectionViewcell的标示符。</div><div class="line">  </div><div class="line">##  MRPRAcceptViewController</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_MRPRAcceptEditCell @&quot;MRPRAcceptEditCell&quot;</div><div class="line">#define kCellIdentifier_TextCheckMarkCell @&quot;TextCheckMarkCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 合并请求的视图控制器中各种cell的标示符</div><div class="line"> </div><div class="line">##   TopicHotkeyView</div><div class="line"> </div><div class="line">```  </div><div class="line">#define kFirst_Hotkey_Color         @&quot;0x3bbd79&quot;</div><div class="line">#define kOther_Hotkey_Text_Color    @&quot;0x222222&quot;</div><div class="line">#define kOther_HotKey_Border_Color  @&quot;0xb5b5b5&quot;</div><div class="line">```    </div><div class="line">**用途**：颜色的字符串，根据此字符串利用颜色的类别方法生成指定的颜色。     </div><div class="line"> </div><div class="line">##  Message_RootViewController </div><div class="line"> </div><div class="line">```  </div><div class="line">#define kCellIdentifier_Conversation @&quot;ConversationCell&quot;</div><div class="line">#define kCellIdentifier_ToMessage @&quot;ToMessageCell&quot;</div><div class="line">```    </div><div class="line">**用途**： 消息里面两种cell的标示符 </div><div class="line"></div><div class="line">##  TipsViewController</div></pre></td></tr></table></figure></p>
-<p>#define kCellIdentifier_CodingTip @”CodingTipCell”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**用途**： 消息里面各个消息里面详情控制器里的cell的标示符 </div><div class="line"></div><div class="line">## CSSearchModel</div></pre></td></tr></table></figure></p>
-<p>#define kHasSearchBadgeShown @”com.cs.search.badge.hasShown”</p>
-<p>#define kSearchHistory @”com.cs.search.history”</p>
-<p>#define kNewFeature @”com.cs.NewFeature”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">**用途**： 定义一些键名的宏，通过键名取出来需要的东西。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">  </div><div class="line">##拓展</div><div class="line"></div><div class="line"></div><div class="line">######  封装NSLog</div></pre></td></tr></table></figure></p>
-<p>#ifdef YMDEBUG // 调试版本</p>
-<p>#define YMLog(…) NSLog(<strong>VA_ARGS</strong>)</p>
-<p>#else // 发布版本</p>
-<p>#define YMLog(…) </p>
-<p>#endif<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">######由角度获取弧度 有弧度获取角度</div></pre></td></tr></table></figure></p>
-<p>#define degreesToRadian(x) (M_PI * (x) / 180.0)</p>
-<p>#define radianToDegrees(radian) (radian*180.0)/(M_PI)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### 获取RGB颜色</div></pre></td></tr></table></figure></p>
-<p>// 2.获得RGB颜色</p>
-<p>#define RGBA(r, g, b, a)                    [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]</p>
-<p>#define RGB(r, g, b)                        RGBA(r, g, b, 1.0f)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">###### 清除背景色</div></pre></td></tr></table></figure></p>
-<p>#define CLEARCOLOR [UIColor clearColor]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">######  获取当前语言</div></pre></td></tr></table></figure></p>
-<p>#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">######  判断是否 Retina屏、设备是否%fhone 5、是否是iPad</div></pre></td></tr></table></figure></p>
-<p>#define isRetina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)</p>
-<p>#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)</p>
-<p>#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### 获取设备版本</div></pre></td></tr></table></figure></p>
-<p>#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">######  判断是否为iOS7</div></pre></td></tr></table></figure></p>
-<p>#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] &gt;= 7.0)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">######  判断是真机还是模拟器</div></pre></td></tr></table></figure></p>
-<p>#if TARGET_OS_IPHONE<br>//iPhone Device</p>
-<p>#endif<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
-<p>#if TARGET_IPHONE_SIMULATOR<br>//iPhone Simulator</p>
-<p>#endif<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">######  释放一个对象</div></pre></td></tr></table></figure></p>
-<p>#define SAFE_DELETE(P) if(P) { [P release], P = nil; }</p>
-<p>#define SAFE_RELEASE(x) [x release];x=nil<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">######  NavBar高度</div></pre></td></tr></table></figure></p>
-<p>#define NavigationBar_HEIGHT 44<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">######  取view的坐标及长宽</div></pre></td></tr></table></figure></p>
-<p>#define W(view)    view.frame.size.width</p>
-<p>#define H(view)    view.frame.size.height</p>
-<p>#define X(view)    view.frame.origin.x</p>
-<p>#define Y(view)    view.frame.origin.y<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">######  重新设定view的Y值</div></pre></td></tr></table></figure></p>
-<p>#define setFrameY(view, newY) view.frame = CGRectMake(view.frame.origin.x, newY, view.frame.size.width, view.frame.size.height)</p>
-<p>#define setFrameX(view, newX) view.frame = CGRectMake(newX, view.frame.origin.y, view.frame.size.width, view.frame.size.height)</p>
-<p>#define setFrameH(view, newH) view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, newH)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### 常用到的代理对象</div></pre></td></tr></table></figure></p>
-<p>#define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">###### 取出main bundle中的资源的路径</div></pre></td></tr></table></figure></p>
-<p>#define ResourcePath(path)  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:path]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### 根据指定路径从main bundle中加载生成无缓存的图片(UIImage)对象</div></pre></td></tr></table></figure></p>
-<p>#define ImageWithPath(path) [[UIImage alloc] initWithContentsOfFile:path]<br>```</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[My First Blog]]></title>
-      <url>http://dpcoder.cn/2016/10/18/postHello-For-My-First-Blog/</url>
-      <content type="html"><![CDATA[<p><img src="http://of89t88ay.bkt.clouddn.com/2f6b943ffdee88339e10acb9e3fbb37c73a9f8b62abe9-acptHu_fw658.jpeg" alt="Mou icon"></p>
-<center>This is my  first blog</center>
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2016/11/21/iOS开发源码导航/">iOS开发源码导航</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Duan</a></p>
+        <p><span>Created:</span>2016-11-21, 16:37:25</p>
+        <p><span>Updated:</span>2016-11-21, 16:45:34</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2016/11/21/iOS开发源码导航/" title="iOS开发源码导航">http://dpcoder.cn/2016/11/21/iOS开发源码导航/</a>
+            <span class="copy-path" data-clipboard-text="From http://dpcoder.cn/2016/11/21/iOS开发源码导航/　　By Mr.Duan" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
 
 
-<p><b>I am very happy as my blog was build<br><br>I will try my best to update the maintenance of this blog when later work.</b></p>
-]]></content>
-    </entry>
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/11/08/iOS开发-Block使用/">
+                    iOS开发----Block使用
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TimLiu-iOS"><span class="toc-number">1.</span> <span class="toc-text">TimLiu-iOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#目录"><span class="toc-number">1.0.1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#具体内容"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">具体内容 =============================</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Github用法-返回Github用法"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">Github用法@           返回Github用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#完整App"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">完整App@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Xcode8插件"><span class="toc-number">1.0.1.4.</span> <span class="toc-text">Xcode8插件@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#App框架-返回目录"><span class="toc-number">1.0.1.5.</span> <span class="toc-text">App框架   返回目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UI"><span class="toc-number">1.0.1.6.</span> <span class="toc-text">UI@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#日历三方库"><span class="toc-number">1.0.1.7.</span> <span class="toc-text">日历三方库@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下拉刷新"><span class="toc-number">1.0.1.8.</span> <span class="toc-text">下拉刷新@</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#模糊效果"><span class="toc-number">1.0.1.8.1.</span> <span class="toc-text">模糊效果@</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AutoLayout"><span class="toc-number">1.0.1.8.2.</span> <span class="toc-text">AutoLayout@</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#富文本-返回目录"><span class="toc-number">1.0.1.9.</span> <span class="toc-text">富文本@   返回目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图表"><span class="toc-number">1.0.1.10.</span> <span class="toc-text">图表@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#颜色"><span class="toc-number">1.0.1.11.</span> <span class="toc-text">颜色@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#表相关-、TabbleView、即时聊天界面"><span class="toc-number">1.0.1.12.</span> <span class="toc-text">表相关@、TabbleView、即时聊天界面@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TableView"><span class="toc-number">1.0.1.13.</span> <span class="toc-text">TableView@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CollectionView"><span class="toc-number">1.0.1.14.</span> <span class="toc-text">CollectionView@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#隐藏与显示"><span class="toc-number">1.0.1.15.</span> <span class="toc-text">隐藏与显示@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HUD与Toast"><span class="toc-number">1.0.1.16.</span> <span class="toc-text">HUD与Toast@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对话框"><span class="toc-number">1.0.1.17.</span> <span class="toc-text">对话框@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pop"><span class="toc-number">1.0.1.18.</span> <span class="toc-text">Pop@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#状态栏"><span class="toc-number">1.0.1.19.</span> <span class="toc-text">状态栏@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#导航栏"><span class="toc-number">1.0.1.20.</span> <span class="toc-text">导航栏@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置"><span class="toc-number">1.0.1.21.</span> <span class="toc-text">设置@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Switch"><span class="toc-number">1.0.1.22.</span> <span class="toc-text">Switch@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Category"><span class="toc-number">1.0.1.23.</span> <span class="toc-text">Category@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#主题"><span class="toc-number">1.0.1.24.</span> <span class="toc-text">主题@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#电影选座"><span class="toc-number">1.0.1.25.</span> <span class="toc-text">电影选座@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#瀑布流"><span class="toc-number">1.0.1.26.</span> <span class="toc-text">瀑布流@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#菜单"><span class="toc-number">1.0.1.27.</span> <span class="toc-text">菜单@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TabBar"><span class="toc-number">1.0.1.28.</span> <span class="toc-text">TabBar@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#小红点"><span class="toc-number">1.0.1.29.</span> <span class="toc-text">小红点@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#page"><span class="toc-number">1.0.1.30.</span> <span class="toc-text">page@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#轮播"><span class="toc-number">1.0.1.31.</span> <span class="toc-text">轮播@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#时间选择器"><span class="toc-number">1.0.1.32.</span> <span class="toc-text">时间选择器@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#进度"><span class="toc-number">1.0.1.33.</span> <span class="toc-text">进度@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他UI"><span class="toc-number">1.0.1.34.</span> <span class="toc-text">其他UI@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#日历"><span class="toc-number">1.0.1.35.</span> <span class="toc-text">日历@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#游戏"><span class="toc-number">1.0.1.36.</span> <span class="toc-text">游戏@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#侧滑与右滑返回手势"><span class="toc-number">1.0.1.37.</span> <span class="toc-text">侧滑与右滑返回手势@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ipad"><span class="toc-number">1.0.1.38.</span> <span class="toc-text">ipad@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通讯"><span class="toc-number">1.0.1.39.</span> <span class="toc-text">通讯@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动画"><span class="toc-number">1.0.1.40.</span> <span class="toc-text">动画@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gif动画"><span class="toc-number">1.0.1.41.</span> <span class="toc-text">gif动画@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他动画"><span class="toc-number">1.0.1.42.</span> <span class="toc-text">其他动画@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络相关"><span class="toc-number">1.0.1.43.</span> <span class="toc-text">网络相关@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络连接"><span class="toc-number">1.0.1.44.</span> <span class="toc-text">网络连接@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络下载"><span class="toc-number">1.0.1.45.</span> <span class="toc-text">网络下载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图像获取"><span class="toc-number">1.0.1.46.</span> <span class="toc-text">图像获取@</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#网络聊天"><span class="toc-number">1.0.1.46.1.</span> <span class="toc-text">网络聊天@</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络测试"><span class="toc-number">1.0.1.47.</span> <span class="toc-text">网络测试@</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#WebView与WKWebView"><span class="toc-number">1.0.1.47.1.</span> <span class="toc-text">WebView与WKWebView@</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络解析"><span class="toc-number">1.0.1.48.</span> <span class="toc-text">网络解析@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSON"><span class="toc-number">1.0.1.49.</span> <span class="toc-text">JSON@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSON工具"><span class="toc-number">1.0.1.50.</span> <span class="toc-text">JSON工具@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XML-amp-HTML"><span class="toc-number">1.0.1.51.</span> <span class="toc-text">XML&HTML@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Other-Parsing"><span class="toc-number">1.0.1.52.</span> <span class="toc-text">Other Parsing@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通讯录"><span class="toc-number">1.0.1.53.</span> <span class="toc-text">通讯录@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他库"><span class="toc-number">1.0.1.54.</span> <span class="toc-text">其他库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据存储"><span class="toc-number">1.0.1.55.</span> <span class="toc-text">数据存储@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库工具"><span class="toc-number">1.0.1.56.</span> <span class="toc-text">数据库工具@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#缓存处理"><span class="toc-number">1.0.1.57.</span> <span class="toc-text">缓存处理@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库"><span class="toc-number">1.0.1.58.</span> <span class="toc-text">数据库@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#序列化"><span class="toc-number">1.0.1.59.</span> <span class="toc-text">序列化@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PDF"><span class="toc-number">1.0.1.60.</span> <span class="toc-text">PDF@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图像浏览及处理"><span class="toc-number">1.0.1.61.</span> <span class="toc-text">图像浏览及处理@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图像圆角"><span class="toc-number">1.0.1.62.</span> <span class="toc-text">图像圆角</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#摄像"><span class="toc-number">1.0.1.63.</span> <span class="toc-text">摄像@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#拍照"><span class="toc-number">1.0.1.64.</span> <span class="toc-text">拍照</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#照相视频音频处理"><span class="toc-number">1.0.1.65.</span> <span class="toc-text">照相视频音频处理@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频"><span class="toc-number">1.0.1.66.</span> <span class="toc-text">视频@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频播放"><span class="toc-number">1.0.1.67.</span> <span class="toc-text">视频播放@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频录制"><span class="toc-number">1.0.1.68.</span> <span class="toc-text">视频录制@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频剪切"><span class="toc-number">1.0.1.69.</span> <span class="toc-text">视频剪切@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#直播"><span class="toc-number">1.0.1.70.</span> <span class="toc-text">直播@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#响应式框架"><span class="toc-number">1.0.1.71.</span> <span class="toc-text">响应式框架@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#framework"><span class="toc-number">1.0.1.72.</span> <span class="toc-text">framework@</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#混合开发"><span class="toc-number">1.0.1.72.1.</span> <span class="toc-text">混合开发@</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#消息相关"><span class="toc-number">1.0.1.73.</span> <span class="toc-text">消息相关@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#消息推送客户端"><span class="toc-number">1.0.1.74.</span> <span class="toc-text">消息推送客户端@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#消息推送服务端"><span class="toc-number">1.0.1.75.</span> <span class="toc-text">消息推送服务端@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通知相关"><span class="toc-number">1.0.1.76.</span> <span class="toc-text">通知相关@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#时间日期"><span class="toc-number">1.0.1.77.</span> <span class="toc-text">时间日期@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设计模式"><span class="toc-number">1.0.1.78.</span> <span class="toc-text">设计模式@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#版本新API的Demo"><span class="toc-number">1.0.1.79.</span> <span class="toc-text">版本新API的Demo@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码安全与密码"><span class="toc-number">1.0.1.80.</span> <span class="toc-text">代码安全与密码@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试及调试"><span class="toc-number">1.0.1.81.</span> <span class="toc-text">测试及调试@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AppleWatch"><span class="toc-number">1.0.1.82.</span> <span class="toc-text">AppleWatch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动态更新"><span class="toc-number">1.0.1.83.</span> <span class="toc-text">动态更新@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AppleWatch-1"><span class="toc-number">1.0.1.84.</span> <span class="toc-text">AppleWatch@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#VPN完整项目"><span class="toc-number">1.0.1.85.</span> <span class="toc-text">VPN完整项目@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#好的文章"><span class="toc-number">1.0.1.86.</span> <span class="toc-text">好的文章@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Xcode插件"><span class="toc-number">1.0.1.87.</span> <span class="toc-text">Xcode插件@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开发调试工具"><span class="toc-number">1.0.1.88.</span> <span class="toc-text">开发调试工具@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接口调试工具"><span class="toc-number">1.0.1.89.</span> <span class="toc-text">接口调试工具@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cagegory"><span class="toc-number">1.0.1.90.</span> <span class="toc-text">Cagegory@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#美工资源"><span class="toc-number">1.0.1.91.</span> <span class="toc-text">美工资源@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他资源"><span class="toc-number">1.0.1.92.</span> <span class="toc-text">其他资源@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二维码"><span class="toc-number">1.0.1.93.</span> <span class="toc-text">二维码@</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#开发资料"><span class="toc-number">1.0.1.93.1.</span> <span class="toc-text">开发资料@</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#播客"><span class="toc-number">1.0.1.94.</span> <span class="toc-text">播客@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#学习资料"><span class="toc-number">1.0.1.95.</span> <span class="toc-text">学习资料@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#他人开源总结"><span class="toc-number">1.0.1.96.</span> <span class="toc-text">他人开源总结@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Github部分优秀作者"><span class="toc-number">1.0.1.97.</span> <span class="toc-text">Github部分优秀作者@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开发博客列表"><span class="toc-number">1.0.1.98.</span> <span class="toc-text">开发博客列表@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#学习笔记"><span class="toc-number">1.0.1.99.</span> <span class="toc-text">学习笔记@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设计"><span class="toc-number">1.0.1.100.</span> <span class="toc-text">设计@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#物联网"><span class="toc-number">1.0.1.101.</span> <span class="toc-text">物联网@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#未分类"><span class="toc-number">1.0.1.102.</span> <span class="toc-text">未分类@</span></a></li></ol></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
     
-  
-  
-</search>
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"iOS开发源码导航　| Mr.Duan　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/11/21/iOS开发源码导航/" data-title="iOS开发源码导航" data-url="http://dpcoder.cn/2016/11/21/iOS开发源码导航/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"dpcoder"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/11/08/iOS开发-Block使用/" title="Next: iOS开发----Block使用">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/11/21/iOS开发源码导航/">iOS开发源码导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/08/iOS开发-Block使用/">iOS开发----Block使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/05/iTerm2-详细配置教程/">iTerm2 详细配置教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/27/Mac-Xcode-常用快捷键/">Mac && Xcode 常用快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/22/iOS-常用宏定义/">iOS 常用宏定义</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/18/postHello-For-My-First-Blog/">My First Blog</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 Mr.Duan
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
