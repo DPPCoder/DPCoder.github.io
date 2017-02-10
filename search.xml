@@ -4,12 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[new]]></title>
-      <url>http://dpcoder.cn/2017/02/10/new/</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[iOS开发源码导航]]></title>
       <url>http://dpcoder.cn/2016/11/21/iOS%E5%BC%80%E5%8F%91%E6%BA%90%E7%A0%81%E5%AF%BC%E8%88%AA/</url>
       <content type="html"><![CDATA[<h1 id="TimLiu-iOS"><a href="#TimLiu-iOS" class="headerlink" title="TimLiu-iOS"></a>TimLiu-iOS</h1><p><a href="https://travis-ci.org/douban/rexxar-ios" target="_blank" rel="external"><img src="https://travis-ci.org/douban/rexxar-ios.svg?branch=master" alt="Test Status"></a><br><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html" target="_blank" rel="external"><img src="https://img.shields.io/badge/language-ObjC-blue.svg" alt="Language"></a>  </p>
@@ -1852,17 +1846,6 @@ Control + Y: 将刚刚用Control+ K或CMD+ Delete删除的内容粘贴至光标�
 <p>#define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">###### 取出main bundle中的资源的路径</div></pre></td></tr></table></figure></p>
 <p>#define ResourcePath(path)  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:path]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### 根据指定路径从main bundle中加载生成无缓存的图片(UIImage)对象</div></pre></td></tr></table></figure></p>
 <p>#define ImageWithPath(path) [[UIImage alloc] initWithContentsOfFile:path]<br>```</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[My First Blog]]></title>
-      <url>http://dpcoder.cn/2016/10/18/postHello-For-My-First-Blog/</url>
-      <content type="html"><![CDATA[<p><img src="http://of89t88ay.bkt.clouddn.com/2f6b943ffdee88339e10acb9e3fbb37c73a9f8b62abe9-acptHu_fw658.jpeg" alt="Mou icon"></p>
-<center>This is my  first blog</center>
-
-
-<p><b>I am very happy as my blog was build<br><br>I will try my best to update the maintenance of this blog when later work.</b></p>
 ]]></content>
     </entry>
     

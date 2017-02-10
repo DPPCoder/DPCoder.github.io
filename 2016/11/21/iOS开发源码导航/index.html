@@ -1,17 +1,89 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="Mr.Duan" />
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iOS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
 
 
 
@@ -29,289 +101,257 @@
 <meta name="twitter:description" content="各种源码导航.">
 <meta name="twitter:image" content="https://travis-ci.org/douban/rexxar-ios.svg?branch=master">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="Mr.Duan" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="http://of89t88ay.bkt.clouddn.com/56D566BAB04283EAE3DBCC12BDDF00DE.png">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>iOS开发源码导航 | Mr.Duan</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: false,
-        isPost: true,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
+  };
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
 
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
+  <link rel="canonical" href="http://dpcoder.cn/2016/11/21/iOS开发源码导航/"/>
 
 
 
 
 
+  <title> iOS开发源码导航 | Mr.Duan </title>
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="http://of89t88ay.bkt.clouddn.com/logo.png" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">Mr.Duan</a></h1>
-        </hgroup>
 
-        
-        <p class="header-subtitle">段先生</p>
-        
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
+  
 
 
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
-                        
-                        <li>Friends</li>
-                        
-                        
-                        <li>About Me</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
 
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" href="/dpcoder@yeah.net" title="Email"></a>
-                            
-                                <a class="fa GitHub" href="#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="/">friends</a>
-                    
-                    </div>
-                </section>
-                
 
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注iOS移动开发</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>                
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Mr.Duan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">段先生</p>
+    
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Mr.Duan</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="http://of89t88ay.bkt.clouddn.com/logo.png" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">Mr.Duan</a></h1>
-            </hgroup>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
             
-            <p class="header-subtitle">段先生</p>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" target="_blank" href="/dpcoder@yeah.net" title="Email"></a>
-                            
-                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
-</nav>
-      <div class="body-wrap"><article id="post-iOS开发源码导航" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/21/iOS开发源码导航/" class="article-date">
-      <time datetime="2016-11-21T08:37:25.000Z" itemprop="datePublished">2016-11-21</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      iOS开发源码导航
-    </h1>
-  
-
-      </header>
+            Startseite
+          </a>
+        </li>
       
-      <div class="article-info article-info-post">
         
-
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-    </div>
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
 
-        <div class="clearfix"></div>
-      </div>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <li class="menu-item menu-item-search">
           
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Suche
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://dpcoder.cn/2016/11/21/iOS开发源码导航/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Mr.Duan">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mr.Duan">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Mr.Duan" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS开发源码导航
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-21T16:37:25+08:00">
+                2016-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  各种源码导航.
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
         <h1 id="TimLiu-iOS"><a href="#TimLiu-iOS" class="headerlink" title="TimLiu-iOS"></a>TimLiu-iOS</h1><p><a href="https://travis-ci.org/douban/rexxar-ios" target="_blank" rel="external"><img src="https://travis-ci.org/douban/rexxar-ios.svg?branch=master" alt="Test Status"></a><br><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html" target="_blank" rel="external"><img src="https://img.shields.io/badge/language-ObjC-blue.svg" alt="Language"></a>  </p>
 <p><a href="https://github.com/Tim9Liu9/TimLiu-iOS/blob/master/Swift.md" target="_blank" rel="external">Swift版本点击这里</a><br>欢迎加入交QQ流群:  594119878</p>
 <p>github排名 <a href="https://github.com/trending" target="_blank" rel="external">https://github.com/trending</a>,github搜索：<a href="https://github.com/search" target="_blank" rel="external">https://github.com/search</a></p>
@@ -1877,233 +1917,446 @@
 
       
     </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/08/iOS开发-Block使用/" rel="next" title="iOS开发----Block使用">
+                <i class="fa fa-chevron-left"></i> iOS开发----Block使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
     
   </div>
-  
-    
-    <div class="copyright">
-        <p><span>Title:</span><a href="/2016/11/21/iOS开发源码导航/">iOS开发源码导航</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Duan</a></p>
-        <p><span>Created:</span>2016-11-21, 16:37:25</p>
-        <p><span>Updated:</span>2016-11-21, 16:45:34</p>
-        <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/11/21/iOS开发源码导航/" title="iOS开发源码导航">http://dpcoder.cn/2016/11/21/iOS开发源码导航/</a>
-            <span class="copy-path" data-clipboard-text="From http://dpcoder.cn/2016/11/21/iOS开发源码导航/　　By Mr.Duan" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
-        </p>
-    </div>
 
 
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/02/10/new/">
-                    new
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/11/08/iOS开发-Block使用/">
-                    iOS开发----Block使用
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TimLiu-iOS"><span class="toc-number">1.</span> <span class="toc-text">TimLiu-iOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#目录"><span class="toc-number">1.0.1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#具体内容"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">具体内容 =============================</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Github用法-返回Github用法"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">Github用法@           返回Github用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#完整App"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">完整App@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Xcode8插件"><span class="toc-number">1.0.1.4.</span> <span class="toc-text">Xcode8插件@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#App框架-返回目录"><span class="toc-number">1.0.1.5.</span> <span class="toc-text">App框架   返回目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UI"><span class="toc-number">1.0.1.6.</span> <span class="toc-text">UI@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#日历三方库"><span class="toc-number">1.0.1.7.</span> <span class="toc-text">日历三方库@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下拉刷新"><span class="toc-number">1.0.1.8.</span> <span class="toc-text">下拉刷新@</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#模糊效果"><span class="toc-number">1.0.1.8.1.</span> <span class="toc-text">模糊效果@</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AutoLayout"><span class="toc-number">1.0.1.8.2.</span> <span class="toc-text">AutoLayout@</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#富文本-返回目录"><span class="toc-number">1.0.1.9.</span> <span class="toc-text">富文本@   返回目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图表"><span class="toc-number">1.0.1.10.</span> <span class="toc-text">图表@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#颜色"><span class="toc-number">1.0.1.11.</span> <span class="toc-text">颜色@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#表相关-、TabbleView、即时聊天界面"><span class="toc-number">1.0.1.12.</span> <span class="toc-text">表相关@、TabbleView、即时聊天界面@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TableView"><span class="toc-number">1.0.1.13.</span> <span class="toc-text">TableView@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CollectionView"><span class="toc-number">1.0.1.14.</span> <span class="toc-text">CollectionView@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#隐藏与显示"><span class="toc-number">1.0.1.15.</span> <span class="toc-text">隐藏与显示@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HUD与Toast"><span class="toc-number">1.0.1.16.</span> <span class="toc-text">HUD与Toast@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对话框"><span class="toc-number">1.0.1.17.</span> <span class="toc-text">对话框@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pop"><span class="toc-number">1.0.1.18.</span> <span class="toc-text">Pop@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#状态栏"><span class="toc-number">1.0.1.19.</span> <span class="toc-text">状态栏@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#导航栏"><span class="toc-number">1.0.1.20.</span> <span class="toc-text">导航栏@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置"><span class="toc-number">1.0.1.21.</span> <span class="toc-text">设置@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Switch"><span class="toc-number">1.0.1.22.</span> <span class="toc-text">Switch@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Category"><span class="toc-number">1.0.1.23.</span> <span class="toc-text">Category@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#主题"><span class="toc-number">1.0.1.24.</span> <span class="toc-text">主题@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#电影选座"><span class="toc-number">1.0.1.25.</span> <span class="toc-text">电影选座@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#瀑布流"><span class="toc-number">1.0.1.26.</span> <span class="toc-text">瀑布流@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#菜单"><span class="toc-number">1.0.1.27.</span> <span class="toc-text">菜单@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TabBar"><span class="toc-number">1.0.1.28.</span> <span class="toc-text">TabBar@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#小红点"><span class="toc-number">1.0.1.29.</span> <span class="toc-text">小红点@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#page"><span class="toc-number">1.0.1.30.</span> <span class="toc-text">page@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#轮播"><span class="toc-number">1.0.1.31.</span> <span class="toc-text">轮播@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#时间选择器"><span class="toc-number">1.0.1.32.</span> <span class="toc-text">时间选择器@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#进度"><span class="toc-number">1.0.1.33.</span> <span class="toc-text">进度@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他UI"><span class="toc-number">1.0.1.34.</span> <span class="toc-text">其他UI@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#日历"><span class="toc-number">1.0.1.35.</span> <span class="toc-text">日历@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#游戏"><span class="toc-number">1.0.1.36.</span> <span class="toc-text">游戏@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#侧滑与右滑返回手势"><span class="toc-number">1.0.1.37.</span> <span class="toc-text">侧滑与右滑返回手势@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ipad"><span class="toc-number">1.0.1.38.</span> <span class="toc-text">ipad@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通讯"><span class="toc-number">1.0.1.39.</span> <span class="toc-text">通讯@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动画"><span class="toc-number">1.0.1.40.</span> <span class="toc-text">动画@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gif动画"><span class="toc-number">1.0.1.41.</span> <span class="toc-text">gif动画@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他动画"><span class="toc-number">1.0.1.42.</span> <span class="toc-text">其他动画@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络相关"><span class="toc-number">1.0.1.43.</span> <span class="toc-text">网络相关@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络连接"><span class="toc-number">1.0.1.44.</span> <span class="toc-text">网络连接@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络下载"><span class="toc-number">1.0.1.45.</span> <span class="toc-text">网络下载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图像获取"><span class="toc-number">1.0.1.46.</span> <span class="toc-text">图像获取@</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#网络聊天"><span class="toc-number">1.0.1.46.1.</span> <span class="toc-text">网络聊天@</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络测试"><span class="toc-number">1.0.1.47.</span> <span class="toc-text">网络测试@</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#WebView与WKWebView"><span class="toc-number">1.0.1.47.1.</span> <span class="toc-text">WebView与WKWebView@</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络解析"><span class="toc-number">1.0.1.48.</span> <span class="toc-text">网络解析@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSON"><span class="toc-number">1.0.1.49.</span> <span class="toc-text">JSON@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSON工具"><span class="toc-number">1.0.1.50.</span> <span class="toc-text">JSON工具@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XML-amp-HTML"><span class="toc-number">1.0.1.51.</span> <span class="toc-text">XML&HTML@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Other-Parsing"><span class="toc-number">1.0.1.52.</span> <span class="toc-text">Other Parsing@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通讯录"><span class="toc-number">1.0.1.53.</span> <span class="toc-text">通讯录@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他库"><span class="toc-number">1.0.1.54.</span> <span class="toc-text">其他库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据存储"><span class="toc-number">1.0.1.55.</span> <span class="toc-text">数据存储@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库工具"><span class="toc-number">1.0.1.56.</span> <span class="toc-text">数据库工具@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#缓存处理"><span class="toc-number">1.0.1.57.</span> <span class="toc-text">缓存处理@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库"><span class="toc-number">1.0.1.58.</span> <span class="toc-text">数据库@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#序列化"><span class="toc-number">1.0.1.59.</span> <span class="toc-text">序列化@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PDF"><span class="toc-number">1.0.1.60.</span> <span class="toc-text">PDF@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图像浏览及处理"><span class="toc-number">1.0.1.61.</span> <span class="toc-text">图像浏览及处理@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图像圆角"><span class="toc-number">1.0.1.62.</span> <span class="toc-text">图像圆角</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#摄像"><span class="toc-number">1.0.1.63.</span> <span class="toc-text">摄像@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#拍照"><span class="toc-number">1.0.1.64.</span> <span class="toc-text">拍照</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#照相视频音频处理"><span class="toc-number">1.0.1.65.</span> <span class="toc-text">照相视频音频处理@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频"><span class="toc-number">1.0.1.66.</span> <span class="toc-text">视频@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频播放"><span class="toc-number">1.0.1.67.</span> <span class="toc-text">视频播放@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频录制"><span class="toc-number">1.0.1.68.</span> <span class="toc-text">视频录制@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频剪切"><span class="toc-number">1.0.1.69.</span> <span class="toc-text">视频剪切@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#直播"><span class="toc-number">1.0.1.70.</span> <span class="toc-text">直播@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#响应式框架"><span class="toc-number">1.0.1.71.</span> <span class="toc-text">响应式框架@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#framework"><span class="toc-number">1.0.1.72.</span> <span class="toc-text">framework@</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#混合开发"><span class="toc-number">1.0.1.72.1.</span> <span class="toc-text">混合开发@</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#消息相关"><span class="toc-number">1.0.1.73.</span> <span class="toc-text">消息相关@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#消息推送客户端"><span class="toc-number">1.0.1.74.</span> <span class="toc-text">消息推送客户端@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#消息推送服务端"><span class="toc-number">1.0.1.75.</span> <span class="toc-text">消息推送服务端@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通知相关"><span class="toc-number">1.0.1.76.</span> <span class="toc-text">通知相关@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#时间日期"><span class="toc-number">1.0.1.77.</span> <span class="toc-text">时间日期@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设计模式"><span class="toc-number">1.0.1.78.</span> <span class="toc-text">设计模式@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#版本新API的Demo"><span class="toc-number">1.0.1.79.</span> <span class="toc-text">版本新API的Demo@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码安全与密码"><span class="toc-number">1.0.1.80.</span> <span class="toc-text">代码安全与密码@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试及调试"><span class="toc-number">1.0.1.81.</span> <span class="toc-text">测试及调试@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AppleWatch"><span class="toc-number">1.0.1.82.</span> <span class="toc-text">AppleWatch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动态更新"><span class="toc-number">1.0.1.83.</span> <span class="toc-text">动态更新@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AppleWatch-1"><span class="toc-number">1.0.1.84.</span> <span class="toc-text">AppleWatch@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#VPN完整项目"><span class="toc-number">1.0.1.85.</span> <span class="toc-text">VPN完整项目@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#好的文章"><span class="toc-number">1.0.1.86.</span> <span class="toc-text">好的文章@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Xcode插件"><span class="toc-number">1.0.1.87.</span> <span class="toc-text">Xcode插件@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开发调试工具"><span class="toc-number">1.0.1.88.</span> <span class="toc-text">开发调试工具@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接口调试工具"><span class="toc-number">1.0.1.89.</span> <span class="toc-text">接口调试工具@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cagegory"><span class="toc-number">1.0.1.90.</span> <span class="toc-text">Cagegory@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#美工资源"><span class="toc-number">1.0.1.91.</span> <span class="toc-text">美工资源@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他资源"><span class="toc-number">1.0.1.92.</span> <span class="toc-text">其他资源@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二维码"><span class="toc-number">1.0.1.93.</span> <span class="toc-text">二维码@</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#开发资料"><span class="toc-number">1.0.1.93.1.</span> <span class="toc-text">开发资料@</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#播客"><span class="toc-number">1.0.1.94.</span> <span class="toc-text">播客@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#学习资料"><span class="toc-number">1.0.1.95.</span> <span class="toc-text">学习资料@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#他人开源总结"><span class="toc-number">1.0.1.96.</span> <span class="toc-text">他人开源总结@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Github部分优秀作者"><span class="toc-number">1.0.1.97.</span> <span class="toc-text">Github部分优秀作者@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开发博客列表"><span class="toc-number">1.0.1.98.</span> <span class="toc-text">开发博客列表@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#学习笔记"><span class="toc-number">1.0.1.99.</span> <span class="toc-text">学习笔记@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设计"><span class="toc-number">1.0.1.100.</span> <span class="toc-text">设计@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#物联网"><span class="toc-number">1.0.1.101.</span> <span class="toc-text">物联网@</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#未分类"><span class="toc-number">1.0.1.102.</span> <span class="toc-text">未分类@</span></a></li></ol></li></ol></li></ol></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
-
-    <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"iOS开发源码导航　| Mr.Duan　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/11/21/iOS开发源码导航/" data-title="iOS开发源码导航" data-url="http://dpcoder.cn/2016/11/21/iOS开发源码导航/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"dpcoder"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2017/02/10/new/" title="Pre: new">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2016/11/08/iOS开发-Block使用/" title="Next: iOS开发----Block使用">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/10/new/">new</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/21/iOS开发源码导航/">iOS开发源码导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/08/iOS开发-Block使用/">iOS开发----Block使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/05/iTerm2-详细配置教程/">iTerm2 详细配置教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/27/Mac-Xcode-常用快捷键/">Mac && Xcode 常用快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/22/iOS-常用宏定义/">iOS 常用宏定义</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/18/postHello-For-My-First-Blog/">My First Blog</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016-2017 Mr.Duan
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
-            </div>
         </div>
         
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
-</div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-             archives: ".archive-article-title", 
-             miniArchives: "a.post-list-link", 
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
   </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Mr.Duan" />
+          <p class="site-author-name" itemprop="name">Mr.Duan</p>
+          <p class="site-description motion-element" itemprop="description">我是段鹏</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TimLiu-iOS"><span class="nav-number">1.</span> <span class="nav-text">TimLiu-iOS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录"><span class="nav-number">1.0.1.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#具体内容"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">具体内容 =============================</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Github用法-返回Github用法"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">Github用法@           返回Github用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完整App"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">完整App@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Xcode8插件"><span class="nav-number">1.0.1.4.</span> <span class="nav-text">Xcode8插件@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#App框架-返回目录"><span class="nav-number">1.0.1.5.</span> <span class="nav-text">App框架   返回目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UI"><span class="nav-number">1.0.1.6.</span> <span class="nav-text">UI@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#日历三方库"><span class="nav-number">1.0.1.7.</span> <span class="nav-text">日历三方库@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下拉刷新"><span class="nav-number">1.0.1.8.</span> <span class="nav-text">下拉刷新@</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#模糊效果"><span class="nav-number">1.0.1.8.1.</span> <span class="nav-text">模糊效果@</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#AutoLayout"><span class="nav-number">1.0.1.8.2.</span> <span class="nav-text">AutoLayout@</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#富文本-返回目录"><span class="nav-number">1.0.1.9.</span> <span class="nav-text">富文本@   返回目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图表"><span class="nav-number">1.0.1.10.</span> <span class="nav-text">图表@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#颜色"><span class="nav-number">1.0.1.11.</span> <span class="nav-text">颜色@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表相关-、TabbleView、即时聊天界面"><span class="nav-number">1.0.1.12.</span> <span class="nav-text">表相关@、TabbleView、即时聊天界面@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TableView"><span class="nav-number">1.0.1.13.</span> <span class="nav-text">TableView@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CollectionView"><span class="nav-number">1.0.1.14.</span> <span class="nav-text">CollectionView@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#隐藏与显示"><span class="nav-number">1.0.1.15.</span> <span class="nav-text">隐藏与显示@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HUD与Toast"><span class="nav-number">1.0.1.16.</span> <span class="nav-text">HUD与Toast@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对话框"><span class="nav-number">1.0.1.17.</span> <span class="nav-text">对话框@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Pop"><span class="nav-number">1.0.1.18.</span> <span class="nav-text">Pop@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#状态栏"><span class="nav-number">1.0.1.19.</span> <span class="nav-text">状态栏@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导航栏"><span class="nav-number">1.0.1.20.</span> <span class="nav-text">导航栏@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置"><span class="nav-number">1.0.1.21.</span> <span class="nav-text">设置@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Switch"><span class="nav-number">1.0.1.22.</span> <span class="nav-text">Switch@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Category"><span class="nav-number">1.0.1.23.</span> <span class="nav-text">Category@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题"><span class="nav-number">1.0.1.24.</span> <span class="nav-text">主题@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#电影选座"><span class="nav-number">1.0.1.25.</span> <span class="nav-text">电影选座@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#瀑布流"><span class="nav-number">1.0.1.26.</span> <span class="nav-text">瀑布流@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单"><span class="nav-number">1.0.1.27.</span> <span class="nav-text">菜单@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TabBar"><span class="nav-number">1.0.1.28.</span> <span class="nav-text">TabBar@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小红点"><span class="nav-number">1.0.1.29.</span> <span class="nav-text">小红点@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#page"><span class="nav-number">1.0.1.30.</span> <span class="nav-text">page@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#轮播"><span class="nav-number">1.0.1.31.</span> <span class="nav-text">轮播@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时间选择器"><span class="nav-number">1.0.1.32.</span> <span class="nav-text">时间选择器@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进度"><span class="nav-number">1.0.1.33.</span> <span class="nav-text">进度@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他UI"><span class="nav-number">1.0.1.34.</span> <span class="nav-text">其他UI@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#日历"><span class="nav-number">1.0.1.35.</span> <span class="nav-text">日历@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#游戏"><span class="nav-number">1.0.1.36.</span> <span class="nav-text">游戏@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#侧滑与右滑返回手势"><span class="nav-number">1.0.1.37.</span> <span class="nav-text">侧滑与右滑返回手势@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ipad"><span class="nav-number">1.0.1.38.</span> <span class="nav-text">ipad@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通讯"><span class="nav-number">1.0.1.39.</span> <span class="nav-text">通讯@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动画"><span class="nav-number">1.0.1.40.</span> <span class="nav-text">动画@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gif动画"><span class="nav-number">1.0.1.41.</span> <span class="nav-text">gif动画@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他动画"><span class="nav-number">1.0.1.42.</span> <span class="nav-text">其他动画@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络相关"><span class="nav-number">1.0.1.43.</span> <span class="nav-text">网络相关@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络连接"><span class="nav-number">1.0.1.44.</span> <span class="nav-text">网络连接@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络下载"><span class="nav-number">1.0.1.45.</span> <span class="nav-text">网络下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图像获取"><span class="nav-number">1.0.1.46.</span> <span class="nav-text">图像获取@</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#网络聊天"><span class="nav-number">1.0.1.46.1.</span> <span class="nav-text">网络聊天@</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络测试"><span class="nav-number">1.0.1.47.</span> <span class="nav-text">网络测试@</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#WebView与WKWebView"><span class="nav-number">1.0.1.47.1.</span> <span class="nav-text">WebView与WKWebView@</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络解析"><span class="nav-number">1.0.1.48.</span> <span class="nav-text">网络解析@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSON"><span class="nav-number">1.0.1.49.</span> <span class="nav-text">JSON@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSON工具"><span class="nav-number">1.0.1.50.</span> <span class="nav-text">JSON工具@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XML-amp-HTML"><span class="nav-number">1.0.1.51.</span> <span class="nav-text">XML&HTML@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Other-Parsing"><span class="nav-number">1.0.1.52.</span> <span class="nav-text">Other Parsing@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通讯录"><span class="nav-number">1.0.1.53.</span> <span class="nav-text">通讯录@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他库"><span class="nav-number">1.0.1.54.</span> <span class="nav-text">其他库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据存储"><span class="nav-number">1.0.1.55.</span> <span class="nav-text">数据存储@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库工具"><span class="nav-number">1.0.1.56.</span> <span class="nav-text">数据库工具@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存处理"><span class="nav-number">1.0.1.57.</span> <span class="nav-text">缓存处理@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库"><span class="nav-number">1.0.1.58.</span> <span class="nav-text">数据库@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#序列化"><span class="nav-number">1.0.1.59.</span> <span class="nav-text">序列化@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PDF"><span class="nav-number">1.0.1.60.</span> <span class="nav-text">PDF@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图像浏览及处理"><span class="nav-number">1.0.1.61.</span> <span class="nav-text">图像浏览及处理@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图像圆角"><span class="nav-number">1.0.1.62.</span> <span class="nav-text">图像圆角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#摄像"><span class="nav-number">1.0.1.63.</span> <span class="nav-text">摄像@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拍照"><span class="nav-number">1.0.1.64.</span> <span class="nav-text">拍照</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#照相视频音频处理"><span class="nav-number">1.0.1.65.</span> <span class="nav-text">照相视频音频处理@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视频"><span class="nav-number">1.0.1.66.</span> <span class="nav-text">视频@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视频播放"><span class="nav-number">1.0.1.67.</span> <span class="nav-text">视频播放@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视频录制"><span class="nav-number">1.0.1.68.</span> <span class="nav-text">视频录制@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视频剪切"><span class="nav-number">1.0.1.69.</span> <span class="nav-text">视频剪切@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#直播"><span class="nav-number">1.0.1.70.</span> <span class="nav-text">直播@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应式框架"><span class="nav-number">1.0.1.71.</span> <span class="nav-text">响应式框架@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#framework"><span class="nav-number">1.0.1.72.</span> <span class="nav-text">framework@</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#混合开发"><span class="nav-number">1.0.1.72.1.</span> <span class="nav-text">混合开发@</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#消息相关"><span class="nav-number">1.0.1.73.</span> <span class="nav-text">消息相关@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#消息推送客户端"><span class="nav-number">1.0.1.74.</span> <span class="nav-text">消息推送客户端@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#消息推送服务端"><span class="nav-number">1.0.1.75.</span> <span class="nav-text">消息推送服务端@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通知相关"><span class="nav-number">1.0.1.76.</span> <span class="nav-text">通知相关@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时间日期"><span class="nav-number">1.0.1.77.</span> <span class="nav-text">时间日期@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计模式"><span class="nav-number">1.0.1.78.</span> <span class="nav-text">设计模式@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#版本新API的Demo"><span class="nav-number">1.0.1.79.</span> <span class="nav-text">版本新API的Demo@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码安全与密码"><span class="nav-number">1.0.1.80.</span> <span class="nav-text">代码安全与密码@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试及调试"><span class="nav-number">1.0.1.81.</span> <span class="nav-text">测试及调试@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AppleWatch"><span class="nav-number">1.0.1.82.</span> <span class="nav-text">AppleWatch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态更新"><span class="nav-number">1.0.1.83.</span> <span class="nav-text">动态更新@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AppleWatch-1"><span class="nav-number">1.0.1.84.</span> <span class="nav-text">AppleWatch@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VPN完整项目"><span class="nav-number">1.0.1.85.</span> <span class="nav-text">VPN完整项目@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#好的文章"><span class="nav-number">1.0.1.86.</span> <span class="nav-text">好的文章@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Xcode插件"><span class="nav-number">1.0.1.87.</span> <span class="nav-text">Xcode插件@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开发调试工具"><span class="nav-number">1.0.1.88.</span> <span class="nav-text">开发调试工具@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口调试工具"><span class="nav-number">1.0.1.89.</span> <span class="nav-text">接口调试工具@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cagegory"><span class="nav-number">1.0.1.90.</span> <span class="nav-text">Cagegory@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#美工资源"><span class="nav-number">1.0.1.91.</span> <span class="nav-text">美工资源@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他资源"><span class="nav-number">1.0.1.92.</span> <span class="nav-text">其他资源@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二维码"><span class="nav-number">1.0.1.93.</span> <span class="nav-text">二维码@</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#开发资料"><span class="nav-number">1.0.1.93.1.</span> <span class="nav-text">开发资料@</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#播客"><span class="nav-number">1.0.1.94.</span> <span class="nav-text">播客@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#学习资料"><span class="nav-number">1.0.1.95.</span> <span class="nav-text">学习资料@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#他人开源总结"><span class="nav-number">1.0.1.96.</span> <span class="nav-text">他人开源总结@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Github部分优秀作者"><span class="nav-number">1.0.1.97.</span> <span class="nav-text">Github部分优秀作者@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开发博客列表"><span class="nav-number">1.0.1.98.</span> <span class="nav-text">开发博客列表@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#学习笔记"><span class="nav-number">1.0.1.99.</span> <span class="nav-text">学习笔记@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计"><span class="nav-number">1.0.1.100.</span> <span class="nav-text">设计@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#物联网"><span class="nav-number">1.0.1.101.</span> <span class="nav-text">物联网@</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#未分类"><span class="nav-number">1.0.1.102.</span> <span class="nav-text">未分类@</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Duan</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
 </body>
 </html>
